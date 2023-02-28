@@ -1,21 +1,21 @@
 # Chess Games
+class ChessGame:
+    def __init__(self, metadata, moves):
+        self.metadata = metadata
+        self.moves = moves
 
 
-def Game_New(metadata, moves):
-    return [metadata, moves]
+    def Game_GetMetaData(self):
+        return self.metadata
 
 
-def Game_GetMetaData(game):
-    return game[0]
+    def Game_SetMetaData(self, event):
+        self.metadata = event
 
 
-def Game_SetMetaData(game, event):
-    game[0] = event
+    def Game_GetMoves(self):
+        return self.moves
 
 
-def Game_GetMoves(game):
-    return game[1]
-
-
-def Game_SetMoves(game, moves):
-    game[1] = moves
+    def Game_SetMoves(self, moves):
+        self.moves = moves
