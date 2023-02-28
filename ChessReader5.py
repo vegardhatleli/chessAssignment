@@ -2,8 +2,6 @@
 # -------------------
 
 import re
-from ChessGame import *
-from ChessDataBase import *
 import ChessGame
 import ChessDataBase
 # 2. Main
@@ -20,7 +18,34 @@ def ImportChessDataBase(filePath):
     return games
 
 
-#With if statement instead of regex
+def ExportChessDataBase(database):
+    open('exportedfile.pgn', 'w').close()
+    games = database.DataBase_GetGames()
+    f = open('exportedfile.pgn', 'a')
+    for game in games:
+        ExportChessGame(game)
+    f.close()
+
+
+def ExportChessGame(game):
+    f = open('exportedfile.pgn', 'a')
+    metadata = game.Game_GetMetaData()
+    moves = game.Game_GetMoves()
+    for data in metadata:
+        f.write(data[0] + " " + data[1] + '\n')
+    movecount = 1
+    for move in moves:
+        if (movecount % 10 == 0):
+            f.write('\n')
+        f.write(f'{movecount}.{move} ')
+        movecount += 1
+    f.write('\n')
+    f.write('\n')
+    f.close()
+
+    # With if statement instead of regex
+
+
 def stringToMoves(moves_string):
     keep_track_of_move = 1
     last_move_1 = ''
@@ -51,6 +76,7 @@ def stringToMoves(moves_string):
         else:
             move = move + element
     return moves
+
 
 def ReadLine(inputFile):
     line = inputFile.readline()
@@ -95,6 +121,7 @@ def ReadChessDataBase(inputFile):
             elif re.match("\[", line):
                 cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
                 result = re.split(r'\d+\.', cleaned_string)
+                result = result[1:]
                 game = ChessGame.ChessGame(metadata, result)
                 games.append(game)
                 metadata = []
@@ -103,7 +130,7 @@ def ReadChessDataBase(inputFile):
     return games
 
 
-#redundant atm, could be used instead of direct approach
+# redundant atm, could be used instead of direct approach
 def stringToListOfMoves(moves_string):
     cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
     result = re.split(r'\d+\.', cleaned_string)
@@ -112,7 +139,7 @@ def stringToListOfMoves(moves_string):
 
 database = ChessDataBase.ChessDataBase('testdatabase')
 games = ImportChessDataBase(
-    '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')    
+    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
 
 
 pathVegardErik = [
@@ -123,5 +150,9 @@ pathVegardErik = [
 for game in games:
     ChessDataBase.ChessDataBase.DataBase_AddGame(database, game)
 
+testgame = games[0]
 
-print(database.DataBase_GetGames()[0].Game_GetMoves())
+# print(testgame)
+# ExportChessGame(testgame)
+ExportChessDataBase(database)
+# print(database.DataBase_GetGames()[1].Game_GetMoves())
