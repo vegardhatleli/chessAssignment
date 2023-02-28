@@ -19,6 +19,8 @@ def ImportChessDataBase(filePath):
     inputFile.close()
     return games
 
+
+#With if statement instead of regex
 def stringToMoves(moves_string):
     keep_track_of_move = 1
     last_move_1 = ''
@@ -87,23 +89,31 @@ def ReadChessDataBase(inputFile):
                 step = 3
         elif step == 3:  # read moves
             line = ReadLine(inputFile)
-            # print(line)
-            # moves.append(line)
             moves_string = moves_string + str(line)
             if line == None:
                 break
             elif re.match("\[", line):
-                game = ChessGame.ChessGame(metadata, moves_string)
+                cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
+                result = re.split(r'\d+\.', cleaned_string)
+                game = ChessGame.ChessGame(metadata, result)
                 games.append(game)
                 metadata = []
+                moves_string = ''
                 step = 2
     return games
 
+
+#redundant atm, could be used instead of direct approach
+def stringToListOfMoves(moves_string):
+    cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
+    result = re.split(r'\d+\.', cleaned_string)
+    return result
 
 
 database = ChessDataBase.ChessDataBase('testdatabase')
 games = ImportChessDataBase(
     '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')    
+
 
 pathVegardErik = [
     '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn',
@@ -114,7 +124,4 @@ for game in games:
     ChessDataBase.ChessDataBase.DataBase_AddGame(database, game)
 
 
-#print(database.DataBase_GetGames())
-'''
-for element in database.DataBase_GetGames():
-    print(element.Game_GetMetaData())'''
+print(database.DataBase_GetGames()[0].Game_GetMoves())
