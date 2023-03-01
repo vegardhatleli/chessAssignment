@@ -30,6 +30,8 @@ def gameIsWonByWhite(game):
         else:  
             return False
 
+
+
 def numberOfGamesWonByStockfish(chessDatabase):
     count = [0,0,0] # W - L - D
     for game in chessDatabase.DataBase_GetGames():
@@ -38,14 +40,14 @@ def numberOfGamesWonByStockfish(chessDatabase):
                 count[2] += 1
             elif gameIsWonByWhite(game):
                 count[0] += 1
-            else:
+            elif gameIsWonByWhite(game) == False:
                 count[1] += 1
         else:
             if gameIsRemis(game):
                 count[2] += 1
             elif gameIsWonByWhite(game):
                  count[1] += 1
-            else:
+            elif gameIsWonByWhite(game) == False:
                 count[0] += 1
         
     return count
@@ -62,7 +64,7 @@ def numberOfGamesWonByStockfishBlack(chessDatabase):
     count = 0
     for game in chessDatabase.DataBase_GetGames():
         if str(game.Game_GetWhite()[1][0:9]) != 'Stockfish':
-            if gameIsRemis(game) == False and gameIsRemis(game) == False:
+            if gameIsRemis(game) == False and gameIsWonByWhite(game) == False:
                 count += 1
     return count
     
@@ -106,14 +108,15 @@ def plotGamesStillOnGoing(database):
     plt.savefig("GamesStillOngoing.png")
     plt.show()
 
-#database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
+database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
 
 #plotLastMoveBarChart(database)
 #lotGamesStillOnGoing(database)
 
-
-
-
+print(NumberOfGamesWon(database))
+print(numberOfGamesWonByStockfish(database))
+print(numberOfGamesWonByStockfishBlack(database))
+print(numberOfGamesWonByStockfishWhite(database))
 '''
   
 database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
