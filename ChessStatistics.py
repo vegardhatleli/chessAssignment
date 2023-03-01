@@ -1,5 +1,9 @@
 from ChessReader5 import *
-
+import ChessGame
+import ChessDataBase
+import ChessReader5
+import numpy as np
+import matplotlib.pyplot as plt
 
 def NumberOfGamesWon(chessDatabase):
     count = [0,0,0]
@@ -62,9 +66,58 @@ def numberOfGamesWonByStockfishBlack(chessDatabase):
                 count += 1
     return count
     
-database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
+# Settes inn i Statistic "klassen"
+
+
+def plotLastMoveBarChart(database):
+    games = database.DataBase_GetGames()
+    x = np.arange(215)
+    y = np.zeros(215)
+    for game in games:
+        endmove = len(game.Game_GetMoves())
+        y[endmove] = y[endmove] + 1
+
+    plt.bar(x, y, color='blue')
+    plt.xlabel("Moves")
+    plt.ylabel("Games")
+    plt.title("How many moves before end of game")
+    plt.savefig("EndMove.png")
+    plt.show()
+
+
+def plotGamesStillOnGoing(database):
+    games = database.DataBase_GetGames()
+    chart = np.zeros(215)
+    for game in games:
+        endmove = len(game.Game_GetMoves())
+        chart[endmove] = chart[endmove] + 1
+
+    x = np.arange(215)
+    y = np.full(215, 2600)
+    pregames = 0
+    for i in range(215):
+        y[i] = y[i] - chart[i] - pregames
+        pregames += chart[i]
+
+    plt.xlabel("Moves")
+    plt.ylabel("Games")
+    plt.title("How many games ongoing after N'th move")
+    plt.plot(x, y)
+    plt.savefig("GamesStillOngoing.png")
+    plt.show()
+
+#database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
+
+#plotLastMoveBarChart(database)
+#lotGamesStillOnGoing(database)
+
+
+
 
 '''
+  
+database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
+
 
 n = numberOfGamesWonByStockfish(database)
 t = numberOfGamesWonByStockfishWhite(database)

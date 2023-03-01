@@ -45,8 +45,11 @@ def writeGameToDocument(dataBase):
     data_row1 = table1.rows[1].cells
     data_row1[0].text = str(won_by_Stoclfish_white)
     data_row1[1].text = str(won_by_Stockfish_black)
+    
+    
     #TODO fyll inn plot
-    document.add_picture('KaplanMeier.png', width=Inches(5.25))
+    document.add_picture('EndMove.png', width=Inches(5.25))
+    document.add_picture('GamesStillOngoing.png', width=Inches(5.25))
 
     document.add_page_break()
 
