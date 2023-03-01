@@ -119,7 +119,7 @@ def ReadChessDataBase(inputFile):
             moves_string = moves_string + str(line)
             if line == None:
                 break
-            elif re.match("\[", line):
+            elif re.match("\[([a-zA-Z]+)", line):
                 cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
                 result = re.split(r'\d+\.', cleaned_string)
                 result = result[1:]
@@ -140,7 +140,7 @@ def stringToListOfMoves(moves_string):
 
 database = ChessDataBase.ChessDataBase('testdatabase')
 games = ImportChessDataBase(
-    '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
+    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
 
 
 pathVegardErik = [
@@ -151,4 +151,8 @@ pathVegardErik = [
 for game in games:
     ChessDataBase.ChessDataBase.DataBase_AddGame(database, game)
 
-ExportChessDataBaseToPng(database)
+# ExportChessDataBaseToPng(database)
+
+print(len(games))
+
+print(len(games[1].Game_GetMoves()))

@@ -38,8 +38,7 @@ def ImportChessGameFromExcel(filepath):
 
 
 games = ChessReader5.ImportChessDataBase(
-    '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
-)
+    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
 testgame = games[0]
 
 ExportChessGameToExcel(testgame, '1')
