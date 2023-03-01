@@ -301,10 +301,7 @@ BlackElo 3327
 50. Bf3  Raa7  51. Rfc1  Rc7  52. Bd1  Rxc4   53. Rxc4  Rc7   54. Ra4  Rb7   55. Kg2  Nc7   56. Be3 Kf8   57. Nc5  Rb5  58. Nxb3  Ne6  59. Bc1  Ke7   
 60. Ra7+  Bc7   61. Bg5  Rb6   62. Kf1  Rb8   63. Nd2  Rxb2   64. Nc4  Rb1   65. Ke2  Rb4   66. Ne3 Rxe4   67. Bc2  Kf8  68. Ra6  Nd4+   69.Kd3  Rxe3+   
 70. Bxe3  Nd5   71. Ra8+  Kg7   72. Bxd4  exd4   73. Ra7  Kh6   74. Bb3  Nb4+   75. Kc4  Bd6   76. Rd7 Bf8   77. Kxd4  g5  78. Ke5  Bg7+   79.Kf5  Kh7   
-80. Bd5 Nd3   81. Bg8+  Kxg8   82. Rxd3  Kf8   83.hxg5  Bb2   84. Rd7  Bc3  1-0 
-
-BlackElo 3327
-
+80. Bd5 Nd3   81. Bg8+  Kxg8   82. Rxd3  Kf8   83.hxg5  Bb2   84. Rd7  Bc3  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -679,22 +676,8 @@ BlackElo 3289
 40. Qg6  Qf3+   41. Kg1 Rf4   42. Qxh6+ Kg8   43. Qg6+  Kh8  44. Qh6+  Kg8   45. Qg6+  Kh8   46. Re8+  Rf8   47. Qh6+  Kg8   48. Qxg5+  Kh7   49. Rxf8  Qxf8  
 50. Qxd5  Qg7+  51. Kf1  Qf6   52. Qh5+  Kg7   53. Kg2  Qe7   54. Qf3  Kg8   55. Kf1  Kh8   56. Qf5  Kg7   57. Qf4  Qa7   58. Qg5+ Kh7   59. Qf5+  Kg7  
 60. h4  Qa8   61.h5  Qe8   62. Qg5+ Kh7   63. h6  Qf7  64. Kg2  b5   65. Qg7+  Qxg7+   66. hxg7  b4  67. Kf3  Kxg7   68. Ke4  Kf6   69. Kd5 Kg5   
-70. Kxc5  Kg4   71. Kxd4 {(Kxd4) [%eval 
-
-BlackElo 3289
-1. Ke4  Ke1   2. f4  Kd2   3.Kd4  Kc2   4. Kc4  Kd1   5. f5 {(f5) [%eval #10,63] 
-
-BlackElo 3289
-1. f7  Kb2  
-
-BlackElo 3289
-1. d4 {(d4) [%eval #5,197] 
-
-BlackElo 3289
-1. Qb1+  Kxa4   2. Kc4  Ka3 {(b3) [%eval #1,64] 
-
-BlackElo 3289
-
+70. Kxc5  Kg4   71. Kxd4  Kf3   72. Ke5  Ke2  73. Ke4  Ke1   74. f4  Kd2   75.Kd4  Kc2   76. Kc4  Kd1   77. f5  Kc2   78. f6  Kb1   79. f7  Kb2  
+80. f8=Q  Ka3   81. Qf1  Ka2   82. d4  Kb2   83. Kd3  Kxb3  84. Qb1+  Kxa4   85. Kc4  Ka3   86. Qa1#  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -1631,10 +1614,7 @@ BlackElo 3511
 50. Rb5  Be8   51.Rb4  a3   52. Na2 Ba4   53. c5  Bxc2  54. c6  Rc7   55. Ne2 h3   56. Kg1  Rxc6  57. Nxg3  Bxd3   58. gxh3  Bc4   59. Ra4  Bf8   
 60. Nc3  Bb3   61. Rh4+ Kg6   62. Rg4+  Kf7  63. Nge2  Bg7   64.Rf4+  Ke7   65. Re4+ Kd7   66. Re3  Bc4  67. Kg2  Rg6+   68. Kh1  Re6   69. Ne4  a2   
 70. Ra3  Rb6   71. N2g3  a1=R+   72. Rxa1  Bxa1  73. Nf5  Be5   74.Ne3  Rb1+   75. Kg2 Rb2+   76. Kh1  Be2  77. Kg2  Bf4   78. Nf5  Bd3+   79. Kh1  Bxe4   
-80. fxe4  Ke6   81. Kg1 Ke5   82. Ng7  Kxe4   83. Ne6 {(Ne6) [%eval 
-
-BlackElo 3511
-
+80. fxe4  Ke6   81. Kg1 Ke5   82. Ng7  Kxe4   83. Ne6  Be3+   84. Kf1 0-1[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -2063,10 +2043,7 @@ BlackElo 3289
 50. Nc8 Kg8   51. Rd3  Qb8  52. Kf2  a2   53. Ra3 Qb2   54. Ra8  Ng6  55. Qc3  Qb5   56. Ne7+  Kf7   57. Rxd8  Qb6+   58. Kg2  Qxd8   59. Nxg6 Kxg6   
 60. Ra1 Qa8   61. Qc4  Qa3  62. Rxa2  Qd6   63. Ra6  Qd1   64. Ra3  Kf7   65. Qd3  Qc1   66. Ra8  Qc6   67. Qa3  Ne8   68. h5  Qb5   69. Qd3  Qxd3   
 70. exd3  Nf6  71. Ra5  Nd5   72.Rxd5  exd5   73. g4  Kf6   74. f4  g6   75. hxg6  Kxg6   76. Kh3  Kf6   77. Kh4  Kg6  78. d4  Kg7   79.Kh5  Kh7   
-80. g5 hxg5   81. fxg5  Kg7   82. g6  Kf8 {(Kh8) [%eval #20,44] 
-
-BlackElo 3289
-1. Kf6  Kg8   2. g7  d6  3. Ke6  Kxg7  1-0[Event "CCRL 40/15"] 
+80. g5 hxg5   81. fxg5  Kg7   82. g6  Kf8   83. Kg5  Kg7   84. Kf5 Kf8   85. Kf6  Kg8   86. g7  d6  87. Ke6  Kxg7  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -4430,13 +4407,7 @@ BlackElo 3289
 20. Re2  Re8   21. Re3  Qa5   22. Rg3  Qc7   23. Nd1  f6   24. Nf2  Rf8   25. h3  Rab8   26. Re1 Rfe8   27. Ng4  Kh8  28. Qf2  h5   29.Nh2  Rb4   
 30. Qd2 Rc4   31. Rb3  Kg8  32. Nf3  Ba4   33. Nh4  Qd7   34. Rb2  Bc6   35. Reb1  Qf7   36. Rb3  Rc8   37. Kh2  Ra4   38. Rg3  Be8   39. f5  e5   
 40. Ng6  Qc7   41. Qd1  h4   42. Rgb3 Bc6   43. Qh5 exd4+   44. Kh1  Rc4   45. Re1  Rc1   46. Rxc1  Re8   47. Qxh4  Kf7  48. Re1  Qd7  49. Rxe8  Qxe8   
-50. Qf4  d3   51. Rb8  d2 
-
-BlackElo 3289
-1. Kh2  Kxe8 {(Kxe8) [%eval #5,64] 
-
-BlackElo 3289
-1. Ne7+  Kb7   2. Qxc6+ Kb8   3. Qc8#  1-0[Event "CCRL 40/15"] 
+50. Qf4  d3   51. Rb8  d2  52. Rxe8  d1=Q+   53. Kh2  Kxe8   54. Qb8+  Kd7   55. Qd6+ Kc8   56. Ne7+  Kb7   57. Qxc6+ Kb8   58. Qc8#  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -5787,10 +5758,7 @@ BlackElo 3289
 30. Bd3  g4   31. Qf4  b3   32. axb3  Rc6   33. Qd2 Ne4   34. Bxe4 Bxe4   35. Ra1  a4  36. Rxa4  Bd5   37. Rh7  Qxh7   38. Ra8+  Kf7   39. Ra7+  Kg6   
 40. Rxh7 Kxh7   41. Qb4 Rg7   42. Qf8  Rcc7  43. b4  g3   44. f3  Rcf7   45. Qe8  Bxf3   46. Bxg7  Rxg7   47.Qxe6  Bxg2   48. Qxf5+  Rg6   49. d5  Kg7   
 50. Qe5+  Kg8   51. Qe8+  Kh7   52. d6  Bc6   53. Qe7+  Rg7   54. Qh4+ Kg8   55. Qc4+ Kh7   56. Qc2+  Rg6   57. Kf1  Bd7   58. Qe4  g2+   59. Kg1  Bg4  
-60. d7  Bxd7   61. Qh4+  Kg7   62. Qe7+ Kg8   63. Qxd7  Kh8   64. b5  Rf6  65. b6  Rf7   66. Qc8+  Kg7   67. b7 Rf8   68. b8=Q  Rxc8  1-0 
-
-BlackElo 3289
-
+60. d7  Bxd7   61. Qh4+  Kg7   62. Qe7+ Kg8   63. Qxd7  Kh8   64. b5  Rf6  65. b6  Rf7   66. Qc8+  Kg7   67. b7 Rf8   68. b8=Q  Rxc8  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -6486,10 +6454,8 @@ BlackElo 3289
 30. Qxe4  Ng6   31. Rxg3  Qxg3+  32. Kf1  Qh3+  33. Ke1  Qg3+   34. Kd2  Qf2+   35. Qe2  Qc5   36. Bb8  Nf4   37. Qe3  Qd5+   38. Kc2  Qc6   39. Rg1  Nd5   
 40. Qg3 Qxa4+   41. Kb1 Qe4+   42. Kc1  Qe3+  43. Qxe3  Nxe3   44. Rg3  Nd5   45. Rd3  Ne7   46. Rd7  Nc6   47. Rxb7 h5   48. Kd2  h4  49. Ke2  h3   
 50.Kf2  a4   51. Kg3 Kg8   52. Bd6  h2  53. Kxh2  e4   54. Kg3  Na5   55. Rc7  e3   56. Kf3  Bh6   57. Bb4  Nb3   58. Bc5  e2   59. Kxe2  Nc1+   
-60. Kf3 Nd3   61. Ke4 Nf4   62. Kf5  Nd3   63. Bd6  Bc1   64. Kg6 Ne5+   65. Bxe5  Kf8   66. Kf6 Bg5+   67. Ke6  Kg8   68. Rc8+  Bd8 {(Kh7) [%eval #3,64] 
-
-BlackElo 3289
-1. Rh8#  1-0[Event "CCRL 40/15"] 
+60. Kf3 Nd3   61. Ke4 Nf4   62. Kf5  Nd3   63. Bd6  Bc1   64. Kg6 Ne5+   65. Bxe5  Kf8   66. Kf6 Bg5+   67. Ke6  Kg8   68. Rc8+  Bd8   69. Rxd8+  Kh7   
+70. Kf5 a3   71. Rh8#  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -8378,10 +8344,7 @@ BlackElo 3319
 1. d4  Nf6   2. c4  c5   3. d5 g6   4. Nc3  Bg7   5. e4 d6   6. Bd3  O-O   7. Nge2 Nbd7   8. Bc2  Ne8   9. O-O Nc7   
 10. h3  b6   11. a4  Na6   12. Bb1  Nb4   13. f4  Bb7   14. Ra3  Qc7   15. Nb5 Qd8   16. Rg3  a6  17. Nbc3  Qc7   18.b3  Bc8   19. Bd2 Rb8   
 20. h4  Nf6  21. f5  Nh5   22. Rh3  Be5   23. Bh6  Re8   24. g4  Nf6   25. Nf4  b5   26. g5  Nd7   27. h5  Bd4+   28. Kh1 Ne5   29. hxg6 hxg6   
-30. Qe1  Bxc3   31. Qh4  Nf3   32. Rhxf3  e6   33. f6  Be1  34. Rxe1  Nd3  1-0 
-
-BlackElo 3319
-
+30. Qe1  Bxc3   31. Qh4  Nf3   32. Rhxf3  e6   33. f6  Be1  34. Rxe1  Nd3  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -10441,10 +10404,7 @@ BlackElo 3289
 50. Kc6  Bg5   51. Rf2  fxe4   52. Kd7  Rd3   53. c5 e3   54. Ra2  Bf4  55. Kxe6  Kg6   56.c6  Rc3   57. g3  Bxe5  58. Kxe5  Rc5+  59. Kf4  Rxc6   
 60. Ne4  e2   61. Rxe2  a3   62. Ra2  Ra6   63. Kf3  Kf5   64. Nc3  Kg5  65. Kg2  Kf5   66.Nb1  Kg4   67. Rxa3  Rb6   68. Ra4+  Kg5   69. Nc3  Kh6   
 70. Ne4 Rb3   71. g4  Rb6  72. Kg3  Kg6   73.Kf4  Kf7   74. g5 Ke8   75. Ra7  Kf8  76. Kf5  Rb1   77. g6  Rf1+   78. Ke6  Re1  79. g7+  Kg8   
-80. Kf6  Rf1+  81. Kg6  Rg1+   82. Ng5  Ra1   83. Ra8+ {(Ra8) [%eval #8,118] 
-
-BlackElo 3289
-
+80. Kf6  Rf1+  81. Kg6  Rg1+   82. Ng5  Ra1   83. Ra8+  Rxa8  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -11146,10 +11106,7 @@ BlackElo 3289
 50. d6  Rf8   51. Rb7+  Ke6   52. d7 Kd6   53. Ra7  Nb5  54. Ra6+  Ke7   55.Bc6  Nxa3   56. Rxa4  Nc4   57. b5  Ne5   58. Kg2  Kf6   59. Rd4  Rd8   
 60. Kf2  Nf7  61. Rd1  Rf8   62.Ke3  Ke5   63. Rd5+  Ke6   64. Kd4  Rg8   65. Kc5  Rxg3   66. d8=Q  Nxd8   67. Rxd8  Rc3+  68. Kd4  Rc1   69.Bd5+  Ke7   
 70. Rg8  Rb1   71. Kc5  Rc1+   72. Bc4  Rb1   73.b6  Rb2   74. b7  Rxb7   75. Rg7+  Kf6  76. Rxb7  Ke5   77. Bd5  Kf4   78.Kd4  Kg3   79. Rb2  f4   
-80. Ke5  
-
-BlackElo 3289
-1. Rb1  f1=Q+  2. Rxf1  Kxh4  1-0[Event "CCRL 40/15"] 
+80. Ke5 f3   81. Kf5  f2   82. Rb1  f1=Q+  83. Rxf1  Kxh4  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -11828,10 +11785,8 @@ BlackElo 3289
 30. Qb3  Qxb3   31. axb3  Nf5   32. Rh3  Nxd4   33. b4 Kc6   34. Rd3  Nf5  35. Rc2+  Kb7   36.Rdc3  Nd4   37. Rc1 Nb5   38. Rd3  Rh7  39. Rf1  Kc6   
 40. Kf3  a6   41. Ke2  Kd7  42. Ra1  Ra8   43. Kf2  Kc6   44. Kg3  d4   45. Rf1  Ra7   46. Rdf3  Nc3   47. Bxc3  dxc3  48. Rxc3+  Kb5  49. Rcf3  Kxb4   
 50. Rxf7  Raxf7   51. Rxf7 Rxf7   52. g6  Rf1  53. h7  Rh1   54. g7  Rg1+   55. Kf3  Rxg7   56. h8=Q  Rc7   57.Qe8  Rc3+   58. Kf4  Rc4+   59. Kg5  Kc3   
-60. Qxe6  Rb4   61.Qc6+  Kb2   62. e6  Rb5+   63. Kf6  Rc5  64. Qxb6+  Rb5   65. Qa7  Rd5 {(Rb4) [%eval #9,20] 
-
-BlackElo 3289
-1. Qe3  Rd1   2. e8=Q Rd5+   3. Kxd5  1-0[Event "CCRL 40/15"] 
+60. Qxe6  Rb4   61.Qc6+  Kb2   62. e6  Rb5+   63. Kf6  Rc5  64. Qxb6+  Rb5   65. Qa7  Rd5   66. e7  Rd6+   67. Ke5 Rd2   68. Qe3  Rd1   69. e8=Q Rd5+   
+70. Kxd5  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -12516,13 +12471,7 @@ BlackElo 3289
 20. g4  h5   21. g5  Ne8   22. Ne4  Bc8   23. Qe2  Bb7   24. Ng3  Rb8   25. Re3 Ng7   26. Qe1  Ba8  27. b3  Rb5   28.Bxb5  axb5   29. Rd3  c4   
 30. bxc4  bxc4   31. Rd4  Qb7   32. Qc3 Nc5   33. Bc1  Nb3  34. Ne4  Nxd4  35. Nf6+  Kh8   36. Nxd4  Be7   37. Qxc4  Bxf6   38. gxf6  Ne8   39. Nc6 Qb1   
 40. Qf4  Bxc6  41. dxc6  Kg8  42. a6  Qa1   43. Qe3  Nc7   44. a7  Qa5   45. Ba3  Qa4   46. Qh6  Ne6   47. c7  Qc6   48. Bxd6  g5   49.Qxh5  Qb7   
-50. Qe2  Qa8   51. Qc2 {(Qh5) [%eval #9,68] 
-
-BlackElo 3289
-1. Qe7  Qa8   2. Kh2  g4   3. Qe5 Qf8   4. Bxf8  Kh8   5. Qh5+ Kg8   6. Qxg4+  Kh8   7. Qg7#  1-0 
-
-BlackElo 3289
-
+50. Qe2  Qa8   51. Qc2  Nxc7   52. Qxc7  Qf3  53. Qe7  Qa8   54. Kh2  g4   55. Qe5 Qf8   56. Bxf8  Kh8   57. Qh5+ Kg8   58. Qxg4+  Kh8   59. Qg7#  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -13210,19 +13159,8 @@ BlackElo 3289
 40. Ke2  c6   41. Kf3  Ng3   42. Kg4 Nf1   43. Nf3  Ne3+  44. Kh5  Kc8   45.Nxg5  Bf6   46. Nf3  Nxg2   47. Bf2  Kd7   48. Kg6  Be7   49. Kf5 Bd8   
 50. Ne5+  Ke7  51. Ke4  Ke6   52.Nc4  Kd7   53. Nd6 Kc7   54. Nf7  Bf6  55. Ne5  Bg5   56. Ng6  Bf6   57. Kf3  Ne3   58. Bxh4  Bxd4   59. Nxf4  Kd7   
 60. Ke4  Nc2   61. Kd3  Be3   62. Bg5 Bxf4   63. Bxf4 Nb4+   64. Ke4  Ke6   65. h4  Nd5   66. Be5  Ne7   67. h5  Nf5   68. Kf4  Ne7   69. Bg7 Ng8   
-70. h6 Nxh6   71. Bxh6  Kd7   72. Kf5  Kc8   73.Bf4  b5   74. cxb6  c5   75. a5 {(a5) [%eval #10,41] 
-
-BlackElo 3289
-1. Bc3  Kc6 {(Kc6) [%eval #11,31] 
-
-BlackElo 3289
-1. b8=R {(b8=R) [%eval #5,62] 
-
-BlackElo 3289
-1. Kd6  Ka7 {(Ka7) [%eval #2,64] 
-
-BlackElo 3289
-
+70. h6 Nxh6   71. Bxh6  Kd7   72. Kf5  Kc8   73.Bf4  b5   74. cxb6  c5   75. a5  Kb7   76. Be5  c4   77. Bc3  Kc6   78. Ke6  Kb5   79. b7  Ka6   
+80. b8=R  Ka7   81. Rb6  Ka8   82. Kd6  Ka7   83. Kc7  Ka8   84. Ra6# 1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -13902,13 +13840,8 @@ BlackElo 3289
 50. Kg2  Kg6  51. a5  bxa5   52. Rxa5  Rf3   53. Ra6+  Kh7   54. Re6  Kg7   55. Ra6  Kh7   56. Ra7  R3f6  57. Kg1  Kg6   58.Rcxc7  Rxc7   59. Rxc7  Ra6   
 60. Rc2  Ra1+   61. Kg2  Kf7   62. Kf3  Rh1   63. Rc5  Kf6   64. Ke4  Rxh3   65. f4 gxf4   66. exf4 Kg7   67. Rc6  Rh2  68. g5  h3   69. Rh6 Rh1   
 70. Kf5  h2  71. Rh3  Rd1   72. Rxh2  Rd5+   73. Kg4  Rd4   74. Re2  Kg6   75. Re6+ Kf7   76. Rf6+  Kg7  77. Kh5  Ra4   78.Rg6+  Kh7   79. f5 Ra1   
-80. Rh6+  Kg7  81. f6+  Kf7   82. Rh7+  Ke6   83. Kg6  Ra6  84. Re7+  Kd6   85. Kg7  Ra5   86. g6  Ra8   87. Re3 {(Re4) [%eval #13,54] 
-
-BlackElo 3289
-1. Kg8  Ra8+   2. f8=Q  Rxf8+ {(Rxf8) [%eval 
-
-BlackElo 3289
-
+80. Rh6+  Kg7  81. f6+  Kf7   82. Rh7+  Ke6   83. Kg6  Ra6  84. Re7+  Kd6   85. Kg7  Ra5   86. g6  Ra8   87. Re3  Ra7+   88. f7  Kd5  89. Kg8  Ra8+   
+90. f8=Q  Rxf8+  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -14584,10 +14517,7 @@ BlackElo 3289
 30. c4  Qa7  31. c5  Rb8   32. Qe3  Kh7   33. Rd3  Ra8   34. Rb3  Qe7   35. Rb6  Bf6   36. Qb3  Ra7   37. Rb8  Bf7   38. Qb6 Bxh4   39. Qxc6  Kh6  
 40. Qb5  Bf6   41. c6 Be8   42. Nxf6  Qxf6  43. Rxe8  h4   44.Qb3  Kg7   45. Qxe6  hxg3+   46. Kh3  Qf5+   47. Qxf5  gxf5   48.Rxe5  Kf6   49. Re1  Rg7   
 50. Rc1  Rc7   51. Kxg3  Ke6   52. Re1+  Kd6   53. Rd1+  Ke5  54. Rd5+  Ke6  55. Rd7  Rc8   56. Kf4  Kf6   57. Bd5  Rh8  58. Rd6+  Ke7   59. Ke5  Rd8   
-60.Rxd8  Kxd8   61. Kd6  Ke8   62. c7 {(c7) [%eval #5,190] 
-
-BlackElo 3289
-1. Qg8+  Kh6   2. Bf7  f4   3.Qg6#  1-0[Event "CCRL 40/15"] 
+60.Rxd8  Kxd8   61. Kd6  Ke8   62. c7  Kf8   63. c8=Q+  Kg7  64. Qg8+  Kh6   65. Bf7  f4   66.Qg6#  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -15253,10 +15183,8 @@ BlackElo 3289
 20. Rc7  Qd8  21. Rc3  Kh8   22.g4  Bf4   23. Be2 Bc8   24. b3  Bd7  25. Rc6  Qe8   26. Qc2  Be6   27. Nc7  Qd8   28. Kf1  Bc8   29. Kg2  Bb7   
 30. Nd5  h6   31. g5  f6   32. Bg4  fxg5   33. h5  Ba8   34. Qc4  a4   35. bxa4 Bd2   36. b6  Ba5  37. Rb1  Bb7   38.Rb5  Qe8   39. Rxd6 Be1   
 40. f3  Bc8   41.Nc7  Qe7   42. Qc5 Rf7   43. Bxc8  Rxc8   44. Qxe5  Qxe5   45. Rxe5  Kh7   46. Rd1  Bc3   47. Rc5  Rb8   48. Rxc3 Rxb6   49. Kg3 Rb4   
-50. e5  Rb7  51. Nd5  g4   52. fxg4  Rf8   53. e6  Rb2   54. e7  Rg8   55. Re3  Re8   56. Nc7 Rb3   57. Rxb3  Rxe7   58. Rc3  Re4 {(g6) [%eval #11,24] 
-
-BlackElo 3289
-1. Rxg7+  Kh8   2. Re7  Kg8  3. Rf3  Ra3   4. Rxa3  Kf8  5. Rg7  Kxe8   6. Ra8# 1-0[Event "CCRL 40/15"] 
+50. e5  Rb7  51. Nd5  g4   52. fxg4  Rf8   53. e6  Rb2   54. e7  Rg8   55. Re3  Re8   56. Nc7 Rb3   57. Rxb3  Rxe7   58. Rc3  Re4   59. Rd7  Rxa4   
+60. Ne8 Ra8   61. Rxg7+  Kh8   62. Re7  Kg8  63. Rf3  Ra3   64. Rxa3  Kf8  65. Rg7  Kxe8   66. Ra8# 1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -16345,16 +16273,8 @@ BlackElo 3289
 40. Rd6  Rc8  41. Nf4+  Kg7   42.Nh5+  Kf8   43. Kg3 Ba4   44. h4  Ke7  45. Nf6  Bc6   46. h5  Kf8   47. Kf4  Kg7   48. Ke3  a4   49. Kd2  Kf8   
 50. Kc2  Kg7   51. Kc3  Kh8   52. Kb4 Kg7   53. Rd4  Rb8+  54. Kxc4  Rb5  55. f4  Rb8   56. Kc5 Rc8   57. Kb6  Bxg2  58. Rxa4  Rc6+   59. Kb5  Rc8   
 60. Rd4  Bf3   61. b4  Be2+   62. Kb6  Ra8   63. b5  Bf3  64. a4  Bd5   65.Rd3  Kf8   66. a5  Rb8+   67. Kc5  Rc8+   68. Kd6  Rd8+   69.Kc7  Ra8   
-70. Rg3  Ke7   71. Rg8 Ra7+   72. Kb6  Ra8   73. Rxa8  Bxa8 {(Bxa8) [%eval #8,40] 
-
-BlackElo 3289
-1. a6  
-
-BlackElo 3289
-1. axb7  Kg7 {(Kg7) [%eval #3,64] 
-
-BlackElo 3289
-1. Qg8#  1-0[Event "CCRL 40/15"] 
+70. Rg3  Ke7   71. Rg8 Ra7+   72. Kb6  Ra8   73. Rxa8  Bxa8   74. Kc7  Bg2   75. b6  Bh1   76. a6 Kf8   77. b7  Bxb7   78. axb7  Kg7   79. Kb6  Kh8   
+80. b8=Q+ Kg7   81. Qg8#  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -17984,13 +17904,8 @@ BlackElo 3289
 30. Rdc1  Nc5   31. f4  Bxb5   32. cxb5  Ned7   33. b6  Nxe4  34. Qb2+  Kg8  35. b7  Rxc1+   36. Rxc1  Nec5   37. Bb5  Nxb7   38. Bxd7  Qxd7   39. Re1 Nc5   
 40. Rxe7 Rxe7   41. Nf6+  Kf8   42. Nh7+  Kg8   43. Nf6+  Kf8   44. Nxd7+  Rxd7  45. h4  Ne6   46.Qb5  Rc7   47. Qxa5 Rc4   48. g3  Kg7   49.Qb5  Rc5   
 50. Qb2+ Kh7   51. a4  Ng7  52. Qa3  Nf5   53. a5 Nxg3   54. a6  Ne2+  55. Kf2  Nd4   56. a7  Rc8   57. a8=Q  Rxa8   58. Qxa8  Nf5   59.Qf8  Nh6   
-60. Qxd6  Kg7   61. Qe5+  Kg8  62. Kf3  Nf5   63. Qf6  Ng7   64.Qd8+  Kh7   65. Qf8  f6   66. Qxf6 {(Qxf6) [%eval #9,73] 
-
-BlackElo 3289
-1. Qe7  Ng7 {(Ng7) [%eval #6,51] 
-
-BlackElo 3289
-1. Kh6  Nf5+   2. Kxg6 1-0[Event "CCRL 40/15"] 
+60. Qxd6  Kg7   61. Qe5+  Kg8  62. Kf3  Nf5   63. Qf6  Ng7   64.Qd8+  Kh7   65. Qf8  f6   66. Qxf6  Kg8   67. Kg4  Ne8   68. Qe7  Ng7   69. Kg5  Nf5   
+70. Qf6 Nxh4   71. Kh6  Nf5+   72. Kxg6 1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -18871,10 +18786,7 @@ BlackElo 3511
 1. e4  c5   2. Nf3  e6   3. d4 cxd4   4. Nxd4  Nf6   5. Nc3 Nc6   6. Ndb5  d6   7. Bf4 e5   8. Bg5  a6   9. Na3 b5   
 10. Bxf6  gxf6  11. Nd5  f5   12.c3  Bg7   13. Bd3 Be6   14. Qh5  O-O  15. O-O  f4   16. Rfd1  Kh8   17. Nc2  f5   18. Ncb4  Nxb4   19. Nxb4  a5   
 20. exf5  Bf7   21. Qh3  Qf6   22. Nc2  d5   23. a3  Rg8   24. Kh1  Qg5   25. f3 Ra6   26. f6  Bh6  27. Rg1  Rxf6  28. Rae1  a4   29. Nb4  e4   
-30. fxe4  Bf8   31. Ref1  Rh6   32. Qf3  Bd6   33. g3  fxg3   34. Rg2  Rxh2+ {(Be6) [%eval #8,68] 
-
-BlackElo 3511
-
+30. fxe4  Bf8   31. Ref1  Rh6   32. Qf3  Bd6   33. g3  fxg3   34. Rg2  Rxh2+   35. Rxh2  0-1[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -28302,10 +28214,7 @@ BlackElo 3431
 10. Bf3  Nbd7   11. a4  Rc8   12. a5  h6   13. Re1  Rc4   14. Nd2  Rb4   15. b3 Qc8   16. Ndb1 Nb8   17. Ra3  Nbd7  18. Nd5  Bxd5   19. exd5  Bd8   
 20. Qd2  Rh4   21. Qc3  Bc7   22. g3  e4   23. Bd1  Rh3   24. Bd4  h5   25. Nd2 e3   26. Bxe3  Ne5  27. Bf3  Nfg4   28.Ra4  Qd7   29. Bd4 f5   
 30. Bg2  Rxh2  31. Nf3  Rxg2+   32. Kxg2  Re8   33. Bb6  Bxb6   34. axb6  Re7   35. Nxe5 dxe5   36. f3  Qxd5  37. Ra5  Qd7   38.fxg4  fxg4   39. Raxe5 Rxe5   
-40. Rxe5  Qd1   41.Qc4+  Kf8   42. Qc8+  Qd8   43. Qxd8+ {(Qxd8) [%eval 
-
-BlackElo 3431
-
+40. Rxe5  Qd1   41.Qc4+  Kf8   42. Qc8+  Qd8   43. Qxd8+  Kf7  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -32451,10 +32360,7 @@ BlackElo 3348
 50. Qa5  Qc5   51. Qa3  Qc8   52. Qa2  Kg7   53. Kc1  Be2   54. Qa3  Bg4   55. Qa5  Bd7   56. Bb4 Be7   57. Nc3  Bc6  58. Kb2  Qd7   59.Qa2  Qc8   
 60. Kb1 Qd7   61. Nd5  Bd8  62. Kb2  g5   63. Ne3  d5   64. exd5  Ba8   65. c4  gxh4   66. gxh4  Bxh4   67. Qa1  Qf7   68. Qg1+  Kh8   69. Qh1 Bg5   
 70. Qh3  bxc4  71. dxc4  h4   72.Bc5  Qc7   73. Qf3 Qxc5   74. Qh5+  Kg7   75. Qxg5+  Kf7   76. Qh5+  Kf8   77. Qxe5  Qe7  78. Qf4+  Ke8   79.Kb3  Qc5   
-80. Nc2 Bxd5   81. Qe5+  Kf7   82. cxd5  Qe7   83. Qxe7+  Kxe7  1-0 
-
-BlackElo 3348
-
+80. Nc2 Bxd5   81. Qe5+  Kf7   82. cxd5  Qe7   83. Qxe7+  Kxe7  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -41970,10 +41876,7 @@ BlackElo 3431
 130. Bd7 Nd2+   131. Ka2  Ke5   132. Rxa5  Nxc4   133. Ra6  Bc3   134. Kb3  Kd4   135. Rh6  Be1   136. Rh1 Na5+   137. Kc2 Bb4   138. Rh5  Be1  139. Bb5  Bg3   
 140. Rg5  Be1   141. Bf1  Nc6   142. Rg6  Na5   143. Re6  Bg3   144. Bg2  c4   145. Rb6  Nb3   146. Bf1 Nc5   147. Rb4  Be1  148. Rxc4+  Kd5  149. Rg4  Kc6   
 150. Rg6+  Kc7   151. Bb5  Nb7   152. Re6  Bg3   153. Bf1  Bd6   154. Rg6  Bb4   155. Rg5  Nc5   156. a5 Ne6   157. Rh5  Kd6  158. Rh6  Ke5   159.a6  Bc5   
-160. Kd1  Nc7   161. Rc6  Bd4   162. Rxc7 Kd6   163. a7  Bxa7  1-0 
-
-BlackElo 3431
-
+160. Kd1  Nc7   161. Rc6  Bd4   162. Rxc7 Kd6   163. a7  Bxa7  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -44573,10 +44476,7 @@ BlackElo 3511
 50. Qe2  Qd7   51. Bxb4  Rxb4   52. Qf3  Qa7   53. Qc3  Rb7   54. Qe3  Qa6   55. Red1 Rhb8   56. Qc5  c3  57. Qxc3  Qb6   58.Qb3  Qf2   59. Qc2 Qxh4   
 60. d6  Rd8  61. Qc5  Qf4   62. Qxa3  Qxf5   63. Qa5  Qf2   64. Rc7+  Rd7   65. Rxd7+ Rxd7   66. Qb5  Qf5  67. Qd5  h4   68.Rc1  Qf4   69. Rc8 Kxg6   
 70. Rg8+  Kh7   71. Rc8  h3   72. Kb2  Qf2+   73. Kb3  h2   74. Qd3+  Kg7   75. Qd5 Qe3+   76. Kc2  Qe2+  77. Kb3  Kg6   78. Rh8 Kf5   79. Kc3  Ra7  
-80. Rh3  Ra3+   81. Qb3  Qxa2   82. Rf3+ {(Rf3) [%eval 
-
-BlackElo 3511
-1. Kc4  0-1[Event "CCRL 40/15"] 
+80. Rh3  Ra3+   81. Qb3  Qxa2   82. Rf3+  Kg4   83. Qxa3  Qxa3+   84. Kc4  0-1[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL
@@ -45868,10 +45768,7 @@ BlackElo 3433
 10. Nbd2  Nh6  11. O-O  Nf7   12.Qe2  O-O   13. a4  Qa5  14. Rd1  a6   15. h3 Qc7   16. Re1  Bd7  17. b3  b5   18. b4 Nh8   19. Nf1  bxa4  
 20. Bxa4  Ng6  21. Ng3  Be8   22. Nh5  Rf5   23. Ng3  Rf8   24. Ra2  a5   25. b5  Nb4   26. cxb4  axb4   27. Nh5  Bc5   28. Be3 Qb6   29. Bxc5 Qxc5   
 30. Kh2  Ne7   31. Ng3  Ng6   32. Rea1  Rb8   33. Qe3  Qxe3   34. fxe3  Bxb5   35. Bxb5 Rxb5   36. Ra7  Kh8  37. Nh5  Rg8   38.R1a6  h6   39. Nd4 Rbb8   
-40. Nxe6  Nxe5  41. Nexg7  Nf7   42. Rxf7  Rgf8   43. Re7 {(Re7) [%eval 
-
-BlackElo 3433
-
+40. Nxe6  Nxe5  41. Nexg7  Nf7   42. Rxf7  Rgf8   43. Re7  Kg8   44. Rg6 Kh8  1-0[Event "CCRL 40/15"] 
 
 Event CCRL 40/15
 Site CCRL

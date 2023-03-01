@@ -23,5 +23,5 @@ def ReadChessDataBase(inputFile, counts):
 
 counts = [0, 0, 0]
 ImportChessDataBase(
-    "/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/Chess/Stockfish_15_64-bit.commented.[2600].pgn", counts)
+'/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', counts)
 print(counts)
