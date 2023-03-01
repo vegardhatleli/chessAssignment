@@ -2,6 +2,7 @@
 # -------------------
 
 import re
+import pandas as pd
 import ChessGame
 import ChessDataBase
 # 2. Main
@@ -18,17 +19,17 @@ def ImportChessDataBase(filePath):
     return games
 
 
-def ExportChessDataBase(database):
-    open('exportedfile.pgn', 'w').close()
+def ExportChessDataBaseToPng(database):
+    open('chessgames.pgn', 'w').close()
     games = database.DataBase_GetGames()
-    f = open('exportedfile.pgn', 'a')
+    f = open('chessgames.pgn', 'a')
     for game in games:
-        ExportChessGame(game)
+        ExportChessGameToPng(game)
     f.close()
 
 
-def ExportChessGame(game):
-    f = open('exportedfile.pgn', 'a')
+def ExportChessGameToPng(game):
+    f = open('chessgames.pgn', 'a')
     metadata = game.Game_GetMetaData()
     moves = game.Game_GetMoves()
     for data in metadata:
@@ -139,7 +140,7 @@ def stringToListOfMoves(moves_string):
 
 database = ChessDataBase.ChessDataBase('testdatabase')
 games = ImportChessDataBase(
-    '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
+    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
 
 
 pathVegardErik = [
@@ -150,9 +151,4 @@ pathVegardErik = [
 for game in games:
     ChessDataBase.ChessDataBase.DataBase_AddGame(database, game)
 
-testgame = games[0]
-
-# print(testgame)
-# ExportChessGame(testgame)
-ExportChessDataBase(database)
-# print(database.DataBase_GetGames()[1].Game_GetMoves())
+ExportChessDataBaseToPng(database)
