@@ -119,7 +119,7 @@ def ReadChessDataBase(inputFile):
             moves_string = moves_string + str(line)
             if line == None:
                 break
-            elif re.match("\[", line):
+            elif re.match("\[([a-zA-Z]+)", line):
                 cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
                 result = re.split(r'\d+\.', cleaned_string)
                 result = result[1:]
@@ -130,25 +130,30 @@ def ReadChessDataBase(inputFile):
                 step = 2
     return games
 
-
 # redundant atm, could be used instead of direct approach
 def stringToListOfMoves(moves_string):
     cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
     result = re.split(r'\d+\.', cleaned_string)
     return result
 
+def createDataBase(inputfile, name):
+    games = ImportChessDataBase(inputfile)
+    database = ChessDataBase.ChessDataBase(name)
+    for game in games:
+        ChessDataBase.ChessDataBase.DataBase_AddGame(database, game)
+    return database
 
-database = ChessDataBase.ChessDataBase('testdatabase')
-games = ImportChessDataBase(
-    '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn')
 
+name = 'testdatabase'
+inputfile = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+
+database = createDataBase(inputfile, name)
 
 pathVegardErik = [
     '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn',
     '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 ]
 
-for game in games:
-    ChessDataBase.ChessDataBase.DataBase_AddGame(database, game)
+
 
 ExportChessDataBaseToPng(database)
