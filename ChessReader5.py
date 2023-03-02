@@ -131,10 +131,13 @@ def ReadChessDataBase(inputFile):
     return games
 
 # redundant atm, could be used instead of direct approach
+
+
 def stringToListOfMoves(moves_string):
     cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
     result = re.split(r'\d+\.', cleaned_string)
     return result
+
 
 def createDataBase(inputfile, name):
     games = ImportChessDataBase(inputfile)
@@ -145,7 +148,8 @@ def createDataBase(inputfile, name):
 
 
 name = 'testdatabase'
-inputfile = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+inputfile = '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+
 
 database = createDataBase(inputfile, name)
 
@@ -155,5 +159,4 @@ pathVegardErik = [
 ]
 
 
-
-ExportChessDataBaseToPng(database)
+# ExportChessDataBaseToPng(database)
