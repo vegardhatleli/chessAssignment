@@ -148,7 +148,7 @@ def createDataBase(inputfile, name):
 
 
 name = 'testdatabase'
-inputfile = '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+inputfile =   '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 
 
 database = createDataBase(inputfile, name)

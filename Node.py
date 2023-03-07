@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, move):
-        self.moveNumber = 1
-        self.player = True
+        self.moveNumber = 0
+        self.player = False
         self.children = []
         self.move = move
         self.parent = None
@@ -31,11 +31,15 @@ class Node:
         self.player = newPlayer
 
     def Node_AddChildren(self, child):
-        if child not in self.children:
+        for element in self.children:
+            if (element.Node_GetMove() == child.Node_GetMove()):
+                return element
+        else: 
             child.Node_SetMoveNumber(self.Node_GetMoveNumber() + 1)
             child.Node_SetPlayer(not self.Node_GetPlayer())
             child.Node_SetParent(self)
             self.children.append(child)
+            return child
 
     def Node_SetParent(self, newParent):
         self.parent = newParent
@@ -89,5 +93,5 @@ def build_chess_tree():
     node3.Node_AddChildren(node15)
     return node
 
-root = build_chess_tree()
-root.print_tree()
+#root = build_chess_tree()
+#root.print_tree()
