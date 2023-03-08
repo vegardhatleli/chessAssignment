@@ -74,15 +74,15 @@ class Tree:
             if node.Node_GetMove() == 'Root':
                 node.Node_SetMove(opening)
             if node.Node_GetPlayer():
-                g.node(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}', style = 'filled' , fillcolor='white', label = f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()} \n W: {node.Node_GetWhiteWins()} \n B: {node.Node_GetBlackWins()} \n R: {node.Node_GetRemis()}')
+                g.node(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}. {node.Node_GetWhiteWins()}. {node.Node_GetBlackWins()}. {node.Node_GetRemis()}', style = 'filled' , fillcolor='white', label = f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()} \n W: {node.Node_GetWhiteWins()} \n B: {node.Node_GetBlackWins()} \n R: {node.Node_GetRemis()}')
             if not node.Node_GetPlayer():
-                g.node(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}', style = 'filled' , fillcolor='black', fontcolor = 'white', label = f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()} \n W: {node.Node_GetWhiteWins()} \n B: {node.Node_GetBlackWins()} \n R: {node.Node_GetRemis()}')
+                g.node(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}. {node.Node_GetWhiteWins()}. {node.Node_GetBlackWins()}. {node.Node_GetRemis()}', style = 'filled' , fillcolor='black', fontcolor = 'white', label = f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()} \n W: {node.Node_GetWhiteWins()} \n B: {node.Node_GetBlackWins()} \n R: {node.Node_GetRemis()}')
             for child in node.children:
                 add_node(child)
 
         def add_edges(node):
             for child in node.children:
-                g.edge(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}', f'{child.Node_GetMoveNumber()}. {child.Node_GetMove()}')
+                g.edge(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}. {node.Node_GetWhiteWins()}. {node.Node_GetBlackWins()}. {node.Node_GetRemis()}', f'{child.Node_GetMoveNumber()}. {child.Node_GetMove()}. {child.Node_GetWhiteWins()}. {child.Node_GetBlackWins()}. {child.Node_GetRemis()}')
                 add_edges(child)
         
 
@@ -96,6 +96,13 @@ dataBase = createDataBase(
     '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'test')
 
 tree = Tree()
-opening = "QGD Slav"
-depthOfTree = 5
-tree.visualize(dataBase, opening, depthOfTree, 'shallowtree_')
+opening = "Sicilian"
+depthOfTree = 3
+
+tree.build_tree_openings(opening, dataBase, depthOfTree)
+print(tree.rootNode.Node_GetChildren()[0].Node_GetChildren()[0].Node_GetRemis())
+print(tree.rootNode.Node_GetChildren()[1].Node_GetChildren()[0].Node_GetRemis())
+
+
+
+tree.visualize(dataBase, opening, depthOfTree, 'shallowtree_Sicilian')
