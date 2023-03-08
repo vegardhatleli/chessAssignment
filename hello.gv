@@ -1,0 +1,310 @@
+digraph G {
+	Root
+	Root [color=black]
+	d4 [color=grey]
+	d5 [color=black]
+	c4 [color=grey]
+	dxc4 [color=black]
+	Nf3 [color=grey]
+	Nf6 [color=black]
+	Nc3 [color=grey]
+	a6 [color=black]
+	e4 [color=grey]
+	b5 [color=black]
+	e5 [color=grey]
+	Nd5 [color=black]
+	a4 [color=grey]
+	e6 [color=black]
+	axb5 [color=grey]
+	Nb6 [color=black]
+	Be3 [color=grey]
+	Bb7 [color=black]
+	bxa6 [color=grey]
+	Rxa6 [color=black]
+	Rxa6 [color=grey]
+	Nxa6 [color=black]
+	Nd2 [color=grey]
+	Nb4 [color=black]
+	Nxc4 [color=grey]
+	Nxc4 [color=black]
+	Bxc4 [color=grey]
+	Bxg2 [color=black]
+	"Qa4+" [color=grey]
+	Bc6 [color=black]
+	Bb5 [color=grey]
+	Bxb5 [color=black]
+	Nxb5 [color=grey]
+	c6 [color=black]
+	Na7 [color=grey]
+	Qd7 [color=black]
+	Ke2 [color=grey]
+	Qd5 [color=black]
+	Ra1 [color=grey]
+	"Qc4+" [color=black]
+	Kf3 [color=grey]
+	"Qd5+" [color=black]
+	Ke2 [color=grey]
+	"Qc4+" [color=black]
+	Kf3 [color=grey]
+	"Qd5+" [color=black]
+	Kg3 [color=grey]
+	Qe4 [color=black]
+	Nc8 [color=grey]
+	"Qg6+" [color=black]
+	Kf3 [color=grey]
+	"Qf5+" [color=black]
+	Kg3 [color=grey]
+	"Qg6+" [color=black]
+	Kh3 [color=grey]
+	"Qh5+" [color=black]
+	Kg2 [color=grey]
+	"Qg6+" [color=black]
+	Kf3 [color=grey]
+	"Qh5+" [color=black]
+	Kg2 [color=grey]
+	"Qg6+" [color=black]
+	Kh1 [color=grey]
+	"Qe4+" [color=black]
+	Kg1 [color=grey]
+	"Qg6+" [color=black]
+	Kf1 [color=grey]
+	"Qd3+" [color=black]
+	Kg1 [color=grey]
+	"Qg6+" [color=black]
+	Kh1 [color=grey]
+	"Qe4+" [color=black]
+	Kg1 [color=grey]
+	"Qg6+" [color=black]
+	Nxa6 [color=black]
+	Bxc4 [color=grey]
+	Nxc4 [color=black]
+	"Qa4+" [color=grey]
+	Qd7 [color=black]
+	Qxc4 [color=grey]
+	Be7 [color=black]
+	"O-O" [color=grey]
+	"O-O" [color=black]
+	Rfc1 [color=grey]
+	Nb4 [color=black]
+	h3 [color=grey]
+	Rxa1 [color=black]
+	Rxa1 [color=grey]
+	Rb8 [color=black]
+	Ne1 [color=grey]
+	Qc8 [color=black]
+	Qe2 [color=grey]
+	Bc6 [color=black]
+	f3 [color=grey]
+	h6 [color=black]
+	Bf2 [color=grey]
+	Qd8 [color=black]
+	Qc4 [color=grey]
+	Bd5 [color=black]
+	Nxd5 [color=grey]
+	Nxd5 [color=black]
+	Nd3 [color=grey]
+	h5 [color=black]
+	Kh2 [color=grey]
+	g6 [color=black]
+	Qa4 [color=grey]
+	Qc8 [color=black]
+	h4 [color=grey]
+	Qb7 [color=black]
+	Ra2 [color=grey]
+	Qb3 [color=black]
+	Qxb3 [color=grey]
+	Rxb3 [color=black]
+	Nc1 [color=grey]
+	Rb4 [color=black]
+	Ne2 [color=grey]
+	Rc4 [color=black]
+	b3 [color=grey]
+	Rb4 [color=black]
+	Rb2 [color=grey]
+	Rb6 [color=black]
+	Bg3 [color=grey]
+	Kf8 [color=black]
+	Kh3 [color=grey]
+	Ra6 [color=black]
+	Nf4 [color=grey]
+	Ra1 [color=black]
+	Nxd5 [color=grey]
+	"Rh1+" [color=black]
+	Bh2 [color=grey]
+	exd5 [color=black]
+	Rc2 [color=grey]
+	Ke8 [color=black]
+	Rxc7 [color=grey]
+	Rd1 [color=black]
+	Ra7 [color=grey]
+	Rxd4 [color=black]
+	Ra4 [color=grey]
+	Rd3 [color=black]
+	b4 [color=grey]
+	Rd4 [color=black]
+	"Ra8+" [color=grey]
+	Kd7 [color=black]
+	"Ra7+" [color=grey]
+	Ke6 [color=black]
+	"Ra6+" [color=grey]
+	Kd7 [color=black]
+	"Ra7+" [color=grey]
+	Ke8 [color=black]
+	"Ra8+" [color=grey]
+	Kd7 [color=black]
+	"Ra7+" [color=grey]
+	"1/2-1/2" [color=black]
+	Root -> d4
+	d4 -> d5
+	d5 -> c4
+	c4 -> dxc4
+	dxc4 -> Nf3
+	Nf3 -> Nf6
+	Nf6 -> Nc3
+	Nc3 -> a6
+	a6 -> e4
+	e4 -> b5
+	b5 -> e5
+	e5 -> Nd5
+	Nd5 -> a4
+	a4 -> e6
+	e6 -> axb5
+	axb5 -> Nb6
+	Nb6 -> Be3
+	Be3 -> Bb7
+	Bb7 -> bxa6
+	bxa6 -> Rxa6
+	Rxa6 -> Rxa6
+	Rxa6 -> Nxa6
+	Nxa6 -> Nd2
+	Nd2 -> Nb4
+	Nb4 -> Nxc4
+	Nxc4 -> Nxc4
+	Nxc4 -> Bxc4
+	Bxc4 -> Bxg2
+	Bxg2 -> "Qa4+"
+	"Qa4+" -> Bc6
+	Bc6 -> Bb5
+	Bb5 -> Bxb5
+	Bxb5 -> Nxb5
+	Nxb5 -> c6
+	c6 -> Na7
+	Na7 -> Qd7
+	Qd7 -> Ke2
+	Ke2 -> Qd5
+	Qd5 -> Ra1
+	Ra1 -> "Qc4+"
+	"Qc4+" -> Kf3
+	Kf3 -> "Qd5+"
+	"Qd5+" -> Ke2
+	Ke2 -> "Qc4+"
+	"Qc4+" -> Kf3
+	Kf3 -> "Qd5+"
+	"Qd5+" -> Kg3
+	Kg3 -> Qe4
+	Qe4 -> Nc8
+	Nc8 -> "Qg6+"
+	"Qg6+" -> Kf3
+	Kf3 -> "Qf5+"
+	"Qf5+" -> Kg3
+	Kg3 -> "Qg6+"
+	"Qg6+" -> Kh3
+	Kh3 -> "Qh5+"
+	"Qh5+" -> Kg2
+	Kg2 -> "Qg6+"
+	"Qg6+" -> Kf3
+	Kf3 -> "Qh5+"
+	"Qh5+" -> Kg2
+	Kg2 -> "Qg6+"
+	"Qg6+" -> Kh1
+	Kh1 -> "Qe4+"
+	"Qe4+" -> Kg1
+	Kg1 -> "Qg6+"
+	"Qg6+" -> Kf1
+	Kf1 -> "Qd3+"
+	"Qd3+" -> Kg1
+	Kg1 -> "Qg6+"
+	"Qg6+" -> Kh1
+	Kh1 -> "Qe4+"
+	"Qe4+" -> Kg1
+	Kg1 -> "Qg6+"
+	bxa6 -> Nxa6
+	Nxa6 -> Bxc4
+	Bxc4 -> Nxc4
+	Nxc4 -> "Qa4+"
+	"Qa4+" -> Qd7
+	Qd7 -> Qxc4
+	Qxc4 -> Be7
+	Be7 -> "O-O"
+	"O-O" -> "O-O"
+	"O-O" -> Rfc1
+	Rfc1 -> Nb4
+	Nb4 -> h3
+	h3 -> Rxa1
+	Rxa1 -> Rxa1
+	Rxa1 -> Rb8
+	Rb8 -> Ne1
+	Ne1 -> Qc8
+	Qc8 -> Qe2
+	Qe2 -> Bc6
+	Bc6 -> f3
+	f3 -> h6
+	h6 -> Bf2
+	Bf2 -> Qd8
+	Qd8 -> Qc4
+	Qc4 -> Bd5
+	Bd5 -> Nxd5
+	Nxd5 -> Nxd5
+	Nxd5 -> Nd3
+	Nd3 -> h5
+	h5 -> Kh2
+	Kh2 -> g6
+	g6 -> Qa4
+	Qa4 -> Qc8
+	Qc8 -> h4
+	h4 -> Qb7
+	Qb7 -> Ra2
+	Ra2 -> Qb3
+	Qb3 -> Qxb3
+	Qxb3 -> Rxb3
+	Rxb3 -> Nc1
+	Nc1 -> Rb4
+	Rb4 -> Ne2
+	Ne2 -> Rc4
+	Rc4 -> b3
+	b3 -> Rb4
+	Rb4 -> Rb2
+	Rb2 -> Rb6
+	Rb6 -> Bg3
+	Bg3 -> Kf8
+	Kf8 -> Kh3
+	Kh3 -> Ra6
+	Ra6 -> Nf4
+	Nf4 -> Ra1
+	Ra1 -> Nxd5
+	Nxd5 -> "Rh1+"
+	"Rh1+" -> Bh2
+	Bh2 -> exd5
+	exd5 -> Rc2
+	Rc2 -> Ke8
+	Ke8 -> Rxc7
+	Rxc7 -> Rd1
+	Rd1 -> Ra7
+	Ra7 -> Rxd4
+	Rxd4 -> Ra4
+	Ra4 -> Rd3
+	Rd3 -> b4
+	b4 -> Rd4
+	Rd4 -> "Ra8+"
+	"Ra8+" -> Kd7
+	Kd7 -> "Ra7+"
+	"Ra7+" -> Ke6
+	Ke6 -> "Ra6+"
+	"Ra6+" -> Kd7
+	Kd7 -> "Ra7+"
+	"Ra7+" -> Ke8
+	Ke8 -> "Ra8+"
+	"Ra8+" -> Kd7
+	Kd7 -> "Ra7+"
+	"Ra7+" -> "1/2-1/2"
+}

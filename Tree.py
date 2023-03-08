@@ -2,8 +2,8 @@ import Node as N
 from ChessDataBase import *
 from ChessReader5 import *
 from ChessGame import *
-
-
+import graphviz
+from graphviz import *
 class Tree:
     def __init__(self):
         #self.Name = name
@@ -48,6 +48,14 @@ class Tree:
                 parent_node = new_node
 
         return self.rootNode
+    
+    def build_tree_openings(self, opening, dataBase):
+        games = dataBase.DataBase_GetGames()
+        newDataBase = ChessDataBase.ChessDataBase('newDataBase')
+        for game in games:
+            if game.Game_GetOpening()[1] == opening:
+                newDataBase.DataBase_AddGame(game)
+        return self.build(newDataBase)
 
     def print_tree(self, rootNode):
         spaces = ' ' * rootNode.Node_GetMoveNumber() * 2
@@ -102,6 +110,31 @@ class Tree:
 
         return node
 
+def visualize_tree():
+    dataBase = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
+    g = graphviz.Digraph('G', filename='hello.gv')
+    tree = Tree()
+    rootNode = tree.build_tree_openings("QGA, Bogolyubov variation", dataBase)
+    
+    g.node(f'{rootNode.Node_GetMove()}')
+    
+    def add_node(node):
+        if node.Node_GetPlayer():
+            g.node(node.Node_GetMove(), color = 'grey')
+        if not node.Node_GetPlayer():
+            g.node(node.Node_GetMove(), color = 'black')
+        for child in node.children:
+            add_node(child)
+
+    def add_edges(node):
+        for child in node.children:
+            g.edge(node.Node_GetMove(), child.Node_GetMove())
+            add_edges(child)
+    
+    add_node(rootNode)
+    add_edges(rootNode)
+    g.view()
+
 
 def build_tree_openings(opening, dataBase):
     openings = []
@@ -116,7 +149,8 @@ def build_tree_openings(opening, dataBase):
 def build_tree():
 
     dataBase = createDataBase(
-        '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
+            '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+, 'testfil')
     tree = Tree()
     tree.build(dataBase)
     # tree.print_tree(tree.rootNode)
@@ -138,8 +172,10 @@ def build_tree():
 # build_tree()
 
 dataBase = createDataBase(
-    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
-tree = Tree()
-tree.build(dataBase)
+        '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'test')
 
-print(tree.rootNode.Node_GetChildren()[0].Node_GetRemis())
+#tree = Tree()
+#tree.build(dataBase)
+
+#print(tree.rootNode.Node_GetChildren()[0].Node_GetRemis())
+visualize_tree()
