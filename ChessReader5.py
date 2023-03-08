@@ -119,13 +119,3 @@ pathVegardErik = [
     '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 ]
 
-# ExportChessDataBaseToPng(database)
-
-movesString = database.DataBase_GetGames()[0].Game_GetMoves()
-
-list_of_moves = []
-for element in movesString:
-    two_moves = element.split()
-    list_of_moves.append(two_moves[0])
-    list_of_moves.append(two_moves[1])
-print(list_of_moves)
