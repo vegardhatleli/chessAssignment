@@ -1,0 +1,117 @@
+strict digraph G {
+	graph [rankdir=LR]
+	"0. Budapest" [label="0. Budapest 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=black fontcolor=white style=filled]
+	"1. d4" [label="1. d4 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=white style=filled]
+	"2. Nf6" [label="2. Nf6 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=black fontcolor=white style=filled]
+	"3. c4" [label="3. c4 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=white style=filled]
+	"4. e5" [label="4. e5 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=black fontcolor=white style=filled]
+	"5. dxe5" [label="5. dxe5 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=white style=filled]
+	"6. Ng4" [label="6. Ng4 
+ W: 9 
+ B: 0 
+ R: 17" fillcolor=black fontcolor=white style=filled]
+	"7. Bf4" [label="7. Bf4 
+ W: 6 
+ B: 0 
+ R: 17" fillcolor=white style=filled]
+	"8. Nc6" [label="8. Nc6 
+ W: 6 
+ B: 0 
+ R: 17" fillcolor=black fontcolor=white style=filled]
+	"9. Nf3" [label="9. Nf3 
+ W: 6 
+ B: 0 
+ R: 17" fillcolor=white style=filled]
+	"10. Bb4+" [label="10. Bb4+ 
+ W: 6 
+ B: 0 
+ R: 17" fillcolor=black fontcolor=white style=filled]
+	"11. Nbd2" [label="11. Nbd2 
+ W: 6 
+ B: 0 
+ R: 16" fillcolor=white style=filled]
+	"12. Qe7" [label="12. Qe7 
+ W: 6 
+ B: 0 
+ R: 16" fillcolor=black fontcolor=white style=filled]
+	"11. Nc3" [label="11. Nc3 
+ W: 0 
+ B: 0 
+ R: 1" fillcolor=white style=filled]
+	"12. Bxc3+" [label="12. Bxc3+ 
+ W: 0 
+ B: 0 
+ R: 1" fillcolor=black fontcolor=white style=filled]
+	"7. e4" [label="7. e4 
+ W: 3 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"8. Nxe5" [label="8. Nxe5 
+ W: 3 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"9. f4" [label="9. f4 
+ W: 3 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"10. Nec6" [label="10. Nec6 
+ W: 3 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"11. a3" [label="11. a3 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"12. a5" [label="12. a5 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"11. Nc3" [label="11. Nc3 
+ W: 1 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"12. Bc5" [label="12. Bc5 
+ W: 1 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"0. Budapest" -> "1. d4"
+	"1. d4" -> "2. Nf6"
+	"2. Nf6" -> "3. c4"
+	"3. c4" -> "4. e5"
+	"4. e5" -> "5. dxe5"
+	"5. dxe5" -> "6. Ng4"
+	"6. Ng4" -> "7. Bf4"
+	"7. Bf4" -> "8. Nc6"
+	"8. Nc6" -> "9. Nf3"
+	"9. Nf3" -> "10. Bb4+"
+	"10. Bb4+" -> "11. Nbd2"
+	"11. Nbd2" -> "12. Qe7"
+	"10. Bb4+" -> "11. Nc3"
+	"11. Nc3" -> "12. Bxc3+"
+	"6. Ng4" -> "7. e4"
+	"7. e4" -> "8. Nxe5"
+	"8. Nxe5" -> "9. f4"
+	"9. f4" -> "10. Nec6"
+	"10. Nec6" -> "11. a3"
+	"11. a3" -> "12. a5"
+	"10. Nec6" -> "11. Nc3"
+	"11. Nc3" -> "12. Bc5"
+}

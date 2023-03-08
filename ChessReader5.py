@@ -121,4 +121,11 @@ pathVegardErik = [
 
 # ExportChessDataBaseToPng(database)
 
-print(database.DataBase_GetGames()[0].Game_GetOpening()[1])
+movesString = database.DataBase_GetGames()[0].Game_GetMoves()
+
+list_of_moves = []
+for element in movesString:
+    two_moves = element.split()
+    list_of_moves.append(two_moves[0])
+    list_of_moves.append(two_moves[1])
+print(list_of_moves)
