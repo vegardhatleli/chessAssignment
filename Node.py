@@ -5,6 +5,9 @@ class Node:
         self.children = []
         self.move = move
         self.parent = None
+        self.white_wins = 0
+        self.black_wins = 0
+        self.remis = 0
 
     def Node_GetMoveNumber(self):
         return self.moveNumber
@@ -34,7 +37,7 @@ class Node:
         for element in self.children:
             if (element.Node_GetMove() == child.Node_GetMove()):
                 return element
-        else: 
+        else:
             child.Node_SetMoveNumber(self.Node_GetMoveNumber() + 1)
             child.Node_SetPlayer(not self.Node_GetPlayer())
             child.Node_SetParent(self)
@@ -43,16 +46,35 @@ class Node:
 
     def Node_SetParent(self, newParent):
         self.parent = newParent
-    
-    ### printer
+
+    def Node_GetWhiteWins(self):
+        return self.white_wins
+
+    def Node_GetBlackWins(self):
+        return self.black_wins
+
+    def Node_GetRemis(self):
+        return self.remis
+
+    def Node_SetWhiteWins(self, newWins):
+        self.white_wins = newWins
+
+    def Node_SetBlackWins(self, newWins):
+        self.black_wins = newWins
+
+    def Node_SetRemis(self, newRemis):
+        self.remis = newRemis
+
+    # printer
 
     def print_tree(self):
-        spaces = ' ' * self.Node_GetMoveNumber() * 2 
+        spaces = ' ' * self.Node_GetMoveNumber() * 2
         prefix = spaces + '|_' if self.parent else ''
         print(prefix + self.move)
         if self.children:
             for child in self.children:
                 child.print_tree()
+
 
 def build_chess_tree():
 
@@ -81,7 +103,7 @@ def build_chess_tree():
     node1.Node_AddChildren(node5)
     node1.Node_AddChildren(node6)
     node1.Node_AddChildren(node7)
-    
+
     node2.Node_AddChildren(node8)
     node2.Node_AddChildren(node9)
     node2.Node_AddChildren(node10)
@@ -94,4 +116,4 @@ def build_chess_tree():
     return node
 
 #root = build_chess_tree()
-#root.print_tree()
+# root.print_tree()

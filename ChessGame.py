@@ -43,14 +43,29 @@ class ChessGame:
     def Game_GetOpening(self):
         return self.metadata[8]
 
+    def Game_GetVariation(self):
+        if (len(self.metadata) == 13):
+            return self.metadata[9]
+        else:
+            print('This game has no registered variation')
+
     def Game_GetPlyCount(self):
-        return self.metadata[9]
+        if (len(self.metadata) == 13):
+            return self.metadata[10]
+        else:
+            return self.metadata[9]
 
     def Game_GetWhiteELO(self):
-        return self.metadata[10]
+        if (len(self.metadata) == 13):
+            return self.metadata[11]
+        else:
+            return self.metadata[10]
 
     def Game_GetBlacELO(self):
-        return self.metadata[11]
+        if (len(self.metadata) == 13):
+            return self.metadata[12]
+        else:
+            return self.metadata[11]
 
     def Game_GetNthMove(self, n):
-        return self.Game_GetMoves()[n]
+        return self.Game_GetMoves()[n-1]

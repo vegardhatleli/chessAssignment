@@ -160,8 +160,8 @@ def plotGamesStillOnGoing_StockFish(database):
     plt.plot(x, whiteplots, color='r', label='Stockfish white')
     plt.plot(x, blackplots, color='b', label='Stockfish black')
     plt.plot(x, totalplot, color='g', label='Total')
-    plt.savefig("GamesStillOngoingStockfish.png")
     plt.legend()
+    plt.savefig("GamesStillOngoingStockfish.png")
     plt.show()
 
 
@@ -289,8 +289,8 @@ def plotGamesStillOnGoing_StockfishWonOrLost(database):
     axs[1].set_ylabel("Games")
     axs[1].set_title(
         "How many games ongoing after N't move and lost by Stockfish")
-    plt.savefig("GamesStillOngoingStockfishWonorLost.png")
     plt.legend()
+    plt.savefig("GamesStillOngoingStockfishWonorLost.png")
     plt.show()
 
 # CALCULTE MATH HERE THAN DONE
@@ -353,36 +353,47 @@ def CalculateStandardDeviation_StockfishLost(database):
     variance = sum((x - mean)**2 for x in endmoves) / (n - 1)
     return round(math.sqrt(variance), 3)
 
-# database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
 
-# plotLastMoveBarChart(database)
-# lotGamesStillOnGoing(database)
+def ExtractOpeningResults(database):
+    games = database.DataBase_GetGames()
+    opening_results = {}
+    for game in games:
+        opening = game.Game_GetOpening()[1]
+        result = game.Game_GetResult()[1]
+        if (opening not in opening_results.keys()):
+            opening_results[opening] = [0, 0, 0]
+        if result == '1-0':
+            opening_results[opening][0] += 1
+        elif result == '0-1':
+            opening_results[opening][1] += 1
+        else:
+            opening_results[opening][2] += 1
+    return opening_results
+
+
+def ExtractOpeningResultsofGamesPlayedNTimes(database, n):
+    opening_results = ExtractOpeningResults(database)
+    new_opening_results = {}
+    for opening in opening_results:
+        times_played = opening_results[opening][0] + \
+            opening_results[opening][1] + opening_results[opening][2]
+        if times_played >= n:
+            new_opening_results[opening] = [opening_results[opening][0],
+                                            opening_results[opening][1], opening_results[opening][2]]
+    return new_opening_results
+
+
+# database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
 
 
 database = createDataBase(
     '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
 
 
-# print(CalculateMeanValueOfMoves(database))
-# print(CalculateStandardDeviation(database))
+# plotGamesStillOnGoing_StockFish(database)
 
-# plotGamesStillOnGoingStockFish(database)
+#dick = ExtractOpeningResults(database)
 
-# print(CalculateMeanValueOfMoves_StockfishBlack(database))
-# print(CalculateMeanValueOfMoves_StockfishWhite(database))
-# print(CalculateStandardDeviation_StockfishBlack(database))
-# print(CalculateStandardDeviation_StockfishWhite(database))
+dick = ExtractOpeningResultsofGamesPlayedNTimes(database, 200)
 
-# plotGamesStillOnGoing_StockfishWonOrLost(database)
-plotGamesStillOnGoing_StockfishWonOrLost(database)
-print(CalculateMeanValueOfMoves_StockfishLost(database))
-print(CalculateStandardDeviation_StockfishLost(database))
-
-'''
-n = numberOfGamesWonByStockfish(database)
-t = numberOfGamesWonByStockfishWhite(database)
-o = numberOfGamesWonByStockfishBlack(database)
-print(n)
-print(t)
-print(o)
-'''
+print(dick)

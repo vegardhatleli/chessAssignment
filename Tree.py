@@ -1,10 +1,12 @@
 import Node as N
 from ChessDataBase import *
 from ChessReader5 import *
+from ChessGame import *
+
 
 class Tree:
     def __init__(self):
-        #self.Name = name 
+        #self.Name = name
         self.rootNode = N.Node('Root')
         self.treenodes = []
 
@@ -16,7 +18,6 @@ class Tree:
             list_of_moves.append(two_moves[1])
         return list_of_moves
 
-    
     def build(self, dataBase):
 
         def split_MoveString(movesString):
@@ -27,6 +28,15 @@ class Tree:
                 list_of_moves.append(two_moves[1])
             return list_of_moves
 
+        def addResultToNode(game, node):
+            result = game.Game_GetResult()[1]
+            if result == '1-0':
+                node.Node_SetWhiteWins(node.Node_GetWhiteWins() + 1)
+            elif result == '0-1':
+                node.Node_SetBlackWins(node.Node_GetBlackWins() + 1)
+            else:
+                node.Node_SetRemis(node.Node_GetRemis() + 1)
+
         games = dataBase.DataBase_GetGames()
         for game in games:
             parent_node = self.rootNode
@@ -34,12 +44,13 @@ class Tree:
             for move in moves:
                 childNode = N.Node(move)
                 new_node = parent_node.Node_AddChildren(childNode)
+                addResultToNode(game, new_node)
                 parent_node = new_node
 
         return self.rootNode
 
     def print_tree(self, rootNode):
-        spaces = ' ' * rootNode.Node_GetMoveNumber() * 2 
+        spaces = ' ' * rootNode.Node_GetMoveNumber() * 2
         prefix = spaces + '|_' if rootNode.parent else ''
         print(prefix + rootNode.move)
         if rootNode.children:
@@ -50,9 +61,6 @@ class Tree:
         games = dataBase.DataBase_GetGames()
         for game in games:
             print(game.Game_GetMoves())
-
-
-
 
     def build_test_tree():
 
@@ -81,7 +89,7 @@ class Tree:
         node1.Node_AddChildren(node5)
         node1.Node_AddChildren(node6)
         node1.Node_AddChildren(node7)
-        
+
         node2.Node_AddChildren(node8)
         node2.Node_AddChildren(node9)
         node2.Node_AddChildren(node10)
@@ -91,23 +99,27 @@ class Tree:
         node3.Node_AddChildren(node13)
         node3.Node_AddChildren(node14)
         node3.Node_AddChildren(node15)
-        
+
         return node
+
 
 def build_tree_openings(opening, dataBase):
     openings = []
-    
+
     tree = Tree()
-    #tree.build(games)
+    # tree.build(games)
     return tree
 
 # GRAPHWIZ
+
+
 def build_tree():
-        
-    dataBase = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
+
+    dataBase = createDataBase(
+        '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
     tree = Tree()
     tree.build(dataBase)
-    #tree.print_tree(tree.rootNode)
+    # tree.print_tree(tree.rootNode)
     print(tree.rootNode.children[1].Node_GetMove())
     print('##')
     for element in tree.rootNode.children[1].Node_GetChildren():
@@ -120,8 +132,14 @@ def build_tree():
             list_of_secondMoves.append(str(game.Game_GetMoves()[0].split()[1]))
     print(set(list_of_secondMoves))
 
+    # tree.print_tree(tree.rootNode)
 
-    #tree.print_tree(tree.rootNode)
 
-#build_tree()
+# build_tree()
 
+dataBase = createDataBase(
+    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
+tree = Tree()
+tree.build(dataBase)
+
+print(tree.rootNode.Node_GetChildren()[0].Node_GetRemis())
