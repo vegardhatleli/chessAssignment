@@ -1,0 +1,97 @@
+strict digraph G {
+	graph [rankdir=LR]
+	"0. Sicilian. 302. 178. 684" [label="0. Sicilian 
+ W: 302 
+ B: 178 
+ R: 684" fillcolor=black fontcolor=white style=filled]
+	"1. e4. 296. 174. 666" [label="1. e4 
+ W: 296 
+ B: 174 
+ R: 666" fillcolor=white style=filled]
+	"2. c5. 296. 174. 666" [label="2. c5 
+ W: 296 
+ B: 174 
+ R: 666" fillcolor=black fontcolor=white style=filled]
+	"3. Nf3. 268. 144. 548" [label="3. Nf3 
+ W: 268 
+ B: 144 
+ R: 548" fillcolor=white style=filled]
+	"3. f4. 2. 0. 14" [label="3. f4 
+ W: 2 
+ B: 0 
+ R: 14" fillcolor=white style=filled]
+	"3. Nc3. 10. 22. 32" [label="3. Nc3 
+ W: 10 
+ B: 22 
+ R: 32" fillcolor=white style=filled]
+	"3. c3. 12. 6. 46" [label="3. c3 
+ W: 12 
+ B: 6 
+ R: 46" fillcolor=white style=filled]
+	"3. d4. 4. 2. 14" [label="3. d4 
+ W: 4 
+ B: 2 
+ R: 14" fillcolor=white style=filled]
+	"3. b4. 0. 0. 4" [label="3. b4 
+ W: 0 
+ B: 0 
+ R: 4" fillcolor=white style=filled]
+	"3. Ne2. 0. 0. 8" [label="3. Ne2 
+ W: 0 
+ B: 0 
+ R: 8" fillcolor=white style=filled]
+	"1. Nf3. 6. 4. 14" [label="1. Nf3 
+ W: 6 
+ B: 4 
+ R: 14" fillcolor=white style=filled]
+	"2. c5. 4. 4. 12" [label="2. c5 
+ W: 4 
+ B: 4 
+ R: 12" fillcolor=black fontcolor=white style=filled]
+	"3. e4. 4. 2. 10" [label="3. e4 
+ W: 4 
+ B: 2 
+ R: 10" fillcolor=white style=filled]
+	"3. c4. 0. 2. 2" [label="3. c4 
+ W: 0 
+ B: 2 
+ R: 2" fillcolor=white style=filled]
+	"2. g6. 2. 0. 2" [label="2. g6 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"3. e4. 2. 0. 2" [label="3. e4 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"1. c4. 0. 0. 4" [label="1. c4 
+ W: 0 
+ B: 0 
+ R: 4" fillcolor=white style=filled]
+	"2. g6. 0. 0. 4" [label="2. g6 
+ W: 0 
+ B: 0 
+ R: 4" fillcolor=black fontcolor=white style=filled]
+	"3. e4. 0. 0. 4" [label="3. e4 
+ W: 0 
+ B: 0 
+ R: 4" fillcolor=white style=filled]
+	"0. Sicilian. 302. 178. 684" -> "1. e4. 296. 174. 666"
+	"1. e4. 296. 174. 666" -> "2. c5. 296. 174. 666"
+	"2. c5. 296. 174. 666" -> "3. Nf3. 268. 144. 548"
+	"2. c5. 296. 174. 666" -> "3. f4. 2. 0. 14"
+	"2. c5. 296. 174. 666" -> "3. Nc3. 10. 22. 32"
+	"2. c5. 296. 174. 666" -> "3. c3. 12. 6. 46"
+	"2. c5. 296. 174. 666" -> "3. d4. 4. 2. 14"
+	"2. c5. 296. 174. 666" -> "3. b4. 0. 0. 4"
+	"2. c5. 296. 174. 666" -> "3. Ne2. 0. 0. 8"
+	"0. Sicilian. 302. 178. 684" -> "1. Nf3. 6. 4. 14"
+	"1. Nf3. 6. 4. 14" -> "2. c5. 4. 4. 12"
+	"2. c5. 4. 4. 12" -> "3. e4. 4. 2. 10"
+	"2. c5. 4. 4. 12" -> "3. c4. 0. 2. 2"
+	"1. Nf3. 6. 4. 14" -> "2. g6. 2. 0. 2"
+	"2. g6. 2. 0. 2" -> "3. e4. 2. 0. 2"
+	"0. Sicilian. 302. 178. 684" -> "1. c4. 0. 0. 4"
+	"1. c4. 0. 0. 4" -> "2. g6. 0. 0. 4"
+	"2. g6. 0. 0. 4" -> "3. e4. 0. 0. 4"
+}

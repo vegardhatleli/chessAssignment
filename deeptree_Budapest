@@ -1,0 +1,327 @@
+strict digraph G {
+	graph [rankdir=LR]
+	"0. Budapest. 18. 0. 34" [label="0. Budapest 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=black fontcolor=white style=filled]
+	"1. d4. 18. 0. 34" [label="1. d4 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=white style=filled]
+	"2. Nf6. 18. 0. 34" [label="2. Nf6 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=black fontcolor=white style=filled]
+	"3. c4. 18. 0. 34" [label="3. c4 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=white style=filled]
+	"4. e5. 18. 0. 34" [label="4. e5 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=black fontcolor=white style=filled]
+	"5. dxe5. 18. 0. 34" [label="5. dxe5 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=white style=filled]
+	"6. Ng4. 18. 0. 34" [label="6. Ng4 
+ W: 18 
+ B: 0 
+ R: 34" fillcolor=black fontcolor=white style=filled]
+	"7. Bf4. 12. 0. 34" [label="7. Bf4 
+ W: 12 
+ B: 0 
+ R: 34" fillcolor=white style=filled]
+	"8. Nc6. 12. 0. 34" [label="8. Nc6 
+ W: 12 
+ B: 0 
+ R: 34" fillcolor=black fontcolor=white style=filled]
+	"9. Nf3. 12. 0. 34" [label="9. Nf3 
+ W: 12 
+ B: 0 
+ R: 34" fillcolor=white style=filled]
+	"10. Bb4+. 12. 0. 34" [label="10. Bb4+ 
+ W: 12 
+ B: 0 
+ R: 34" fillcolor=black fontcolor=white style=filled]
+	"11. Nbd2. 12. 0. 32" [label="11. Nbd2 
+ W: 12 
+ B: 0 
+ R: 32" fillcolor=white style=filled]
+	"12. Qe7. 12. 0. 32" [label="12. Qe7 
+ W: 12 
+ B: 0 
+ R: 32" fillcolor=black fontcolor=white style=filled]
+	"13. e3. 10. 0. 30" [label="13. e3 
+ W: 10 
+ B: 0 
+ R: 30" fillcolor=white style=filled]
+	"14. Ngxe5. 8. 0. 28" [label="14. Ngxe5 
+ W: 8 
+ B: 0 
+ R: 28" fillcolor=black fontcolor=white style=filled]
+	"15. Nxe5. 8. 0. 28" [label="15. Nxe5 
+ W: 8 
+ B: 0 
+ R: 28" fillcolor=white style=filled]
+	"16. Nxe5. 8. 0. 28" [label="16. Nxe5 
+ W: 8 
+ B: 0 
+ R: 28" fillcolor=black fontcolor=white style=filled]
+	"17. Be2. 8. 0. 22" [label="17. Be2 
+ W: 8 
+ B: 0 
+ R: 22" fillcolor=white style=filled]
+	"18. O-O. 2. 0. 0" [label="18. O-O 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"18. d6. 4. 0. 18" [label="18. d6 
+ W: 4 
+ B: 0 
+ R: 18" fillcolor=black fontcolor=white style=filled]
+	"18. a5. 2. 0. 0" [label="18. a5 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"18. b6. 0. 0. 4" [label="18. b6 
+ W: 0 
+ B: 0 
+ R: 4" fillcolor=black fontcolor=white style=filled]
+	"17. a3. 0. 0. 6" [label="17. a3 
+ W: 0 
+ B: 0 
+ R: 6" fillcolor=white style=filled]
+	"18. Bxd2+. 0. 0. 6" [label="18. Bxd2+ 
+ W: 0 
+ B: 0 
+ R: 6" fillcolor=black fontcolor=white style=filled]
+	"14. Ncxe5. 2. 0. 2" [label="14. Ncxe5 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"15. Nxe5. 2. 0. 2" [label="15. Nxe5 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"16. Nxe5. 2. 0. 2" [label="16. Nxe5 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"17. Be2. 2. 0. 2" [label="17. Be2 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"18. d6. 2. 0. 2" [label="18. d6 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"13. a3. 2. 0. 2" [label="13. a3 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"14. Ngxe5. 2. 0. 2" [label="14. Ngxe5 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"15. Nxe5. 2. 0. 2" [label="15. Nxe5 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"16. Nxe5. 2. 0. 2" [label="16. Nxe5 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"17. e3. 2. 0. 2" [label="17. e3 
+ W: 2 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"18. Bc5. 2. 0. 0" [label="18. Bc5 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"18. Bxd2+. 0. 0. 2" [label="18. Bxd2+ 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"11. Nc3. 0. 0. 2" [label="11. Nc3 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"12. Bxc3+. 0. 0. 2" [label="12. Bxc3+ 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"13. bxc3. 0. 0. 2" [label="13. bxc3 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"14. Qe7. 0. 0. 2" [label="14. Qe7 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"15. Qd5. 0. 0. 2" [label="15. Qd5 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"16. f6. 0. 0. 2" [label="16. f6 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"17. exf6. 0. 0. 2" [label="17. exf6 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=white style=filled]
+	"18. Nxf6. 0. 0. 2" [label="18. Nxf6 
+ W: 0 
+ B: 0 
+ R: 2" fillcolor=black fontcolor=white style=filled]
+	"7. e4. 6. 0. 0" [label="7. e4 
+ W: 6 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"8. Nxe5. 6. 0. 0" [label="8. Nxe5 
+ W: 6 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"9. f4. 6. 0. 0" [label="9. f4 
+ W: 6 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"10. Nec6. 6. 0. 0" [label="10. Nec6 
+ W: 6 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"11. a3. 4. 0. 0" [label="11. a3 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"12. a5. 4. 0. 0" [label="12. a5 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"13. Be3. 4. 0. 0" [label="13. Be3 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"14. Na6. 4. 0. 0" [label="14. Na6 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"15. Nf3. 4. 0. 0" [label="15. Nf3 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"16. Nc5. 4. 0. 0" [label="16. Nc5 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"17. Nc3. 4. 0. 0" [label="17. Nc3 
+ W: 4 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"18. b6. 2. 0. 0" [label="18. b6 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"18. a4. 2. 0. 0" [label="18. a4 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"11. Nc3. 2. 0. 0" [label="11. Nc3 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"12. Bc5. 2. 0. 0" [label="12. Bc5 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"13. Na4. 2. 0. 0" [label="13. Na4 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"14. Bb4+. 2. 0. 0" [label="14. Bb4+ 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"15. Kf2. 2. 0. 0" [label="15. Kf2 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"16. Na6. 2. 0. 0" [label="16. Na6 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"17. a3. 2. 0. 0" [label="17. a3 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=white style=filled]
+	"18. Bc5+. 2. 0. 0" [label="18. Bc5+ 
+ W: 2 
+ B: 0 
+ R: 0" fillcolor=black fontcolor=white style=filled]
+	"0. Budapest. 18. 0. 34" -> "1. d4. 18. 0. 34"
+	"1. d4. 18. 0. 34" -> "2. Nf6. 18. 0. 34"
+	"2. Nf6. 18. 0. 34" -> "3. c4. 18. 0. 34"
+	"3. c4. 18. 0. 34" -> "4. e5. 18. 0. 34"
+	"4. e5. 18. 0. 34" -> "5. dxe5. 18. 0. 34"
+	"5. dxe5. 18. 0. 34" -> "6. Ng4. 18. 0. 34"
+	"6. Ng4. 18. 0. 34" -> "7. Bf4. 12. 0. 34"
+	"7. Bf4. 12. 0. 34" -> "8. Nc6. 12. 0. 34"
+	"8. Nc6. 12. 0. 34" -> "9. Nf3. 12. 0. 34"
+	"9. Nf3. 12. 0. 34" -> "10. Bb4+. 12. 0. 34"
+	"10. Bb4+. 12. 0. 34" -> "11. Nbd2. 12. 0. 32"
+	"11. Nbd2. 12. 0. 32" -> "12. Qe7. 12. 0. 32"
+	"12. Qe7. 12. 0. 32" -> "13. e3. 10. 0. 30"
+	"13. e3. 10. 0. 30" -> "14. Ngxe5. 8. 0. 28"
+	"14. Ngxe5. 8. 0. 28" -> "15. Nxe5. 8. 0. 28"
+	"15. Nxe5. 8. 0. 28" -> "16. Nxe5. 8. 0. 28"
+	"16. Nxe5. 8. 0. 28" -> "17. Be2. 8. 0. 22"
+	"17. Be2. 8. 0. 22" -> "18. O-O. 2. 0. 0"
+	"17. Be2. 8. 0. 22" -> "18. d6. 4. 0. 18"
+	"17. Be2. 8. 0. 22" -> "18. a5. 2. 0. 0"
+	"17. Be2. 8. 0. 22" -> "18. b6. 0. 0. 4"
+	"16. Nxe5. 8. 0. 28" -> "17. a3. 0. 0. 6"
+	"17. a3. 0. 0. 6" -> "18. Bxd2+. 0. 0. 6"
+	"13. e3. 10. 0. 30" -> "14. Ncxe5. 2. 0. 2"
+	"14. Ncxe5. 2. 0. 2" -> "15. Nxe5. 2. 0. 2"
+	"15. Nxe5. 2. 0. 2" -> "16. Nxe5. 2. 0. 2"
+	"16. Nxe5. 2. 0. 2" -> "17. Be2. 2. 0. 2"
+	"17. Be2. 2. 0. 2" -> "18. d6. 2. 0. 2"
+	"12. Qe7. 12. 0. 32" -> "13. a3. 2. 0. 2"
+	"13. a3. 2. 0. 2" -> "14. Ngxe5. 2. 0. 2"
+	"14. Ngxe5. 2. 0. 2" -> "15. Nxe5. 2. 0. 2"
+	"15. Nxe5. 2. 0. 2" -> "16. Nxe5. 2. 0. 2"
+	"16. Nxe5. 2. 0. 2" -> "17. e3. 2. 0. 2"
+	"17. e3. 2. 0. 2" -> "18. Bc5. 2. 0. 0"
+	"17. e3. 2. 0. 2" -> "18. Bxd2+. 0. 0. 2"
+	"10. Bb4+. 12. 0. 34" -> "11. Nc3. 0. 0. 2"
+	"11. Nc3. 0. 0. 2" -> "12. Bxc3+. 0. 0. 2"
+	"12. Bxc3+. 0. 0. 2" -> "13. bxc3. 0. 0. 2"
+	"13. bxc3. 0. 0. 2" -> "14. Qe7. 0. 0. 2"
+	"14. Qe7. 0. 0. 2" -> "15. Qd5. 0. 0. 2"
+	"15. Qd5. 0. 0. 2" -> "16. f6. 0. 0. 2"
+	"16. f6. 0. 0. 2" -> "17. exf6. 0. 0. 2"
+	"17. exf6. 0. 0. 2" -> "18. Nxf6. 0. 0. 2"
+	"6. Ng4. 18. 0. 34" -> "7. e4. 6. 0. 0"
+	"7. e4. 6. 0. 0" -> "8. Nxe5. 6. 0. 0"
+	"8. Nxe5. 6. 0. 0" -> "9. f4. 6. 0. 0"
+	"9. f4. 6. 0. 0" -> "10. Nec6. 6. 0. 0"
+	"10. Nec6. 6. 0. 0" -> "11. a3. 4. 0. 0"
+	"11. a3. 4. 0. 0" -> "12. a5. 4. 0. 0"
+	"12. a5. 4. 0. 0" -> "13. Be3. 4. 0. 0"
+	"13. Be3. 4. 0. 0" -> "14. Na6. 4. 0. 0"
+	"14. Na6. 4. 0. 0" -> "15. Nf3. 4. 0. 0"
+	"15. Nf3. 4. 0. 0" -> "16. Nc5. 4. 0. 0"
+	"16. Nc5. 4. 0. 0" -> "17. Nc3. 4. 0. 0"
+	"17. Nc3. 4. 0. 0" -> "18. b6. 2. 0. 0"
+	"17. Nc3. 4. 0. 0" -> "18. a4. 2. 0. 0"
+	"10. Nec6. 6. 0. 0" -> "11. Nc3. 2. 0. 0"
+	"11. Nc3. 2. 0. 0" -> "12. Bc5. 2. 0. 0"
+	"12. Bc5. 2. 0. 0" -> "13. Na4. 2. 0. 0"
+	"13. Na4. 2. 0. 0" -> "14. Bb4+. 2. 0. 0"
+	"14. Bb4+. 2. 0. 0" -> "15. Kf2. 2. 0. 0"
+	"15. Kf2. 2. 0. 0" -> "16. Na6. 2. 0. 0"
+	"16. Na6. 2. 0. 0" -> "17. a3. 2. 0. 0"
+	"17. a3. 2. 0. 0" -> "18. Bc5+. 2. 0. 0"
+}
