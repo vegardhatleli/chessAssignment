@@ -20,5 +20,3 @@ class ChessDataBase:
 
     def DataBase_AddGame(self, game):
         self.games.append(game)
-        #games = DataBase_GetGames(dataBase)
-        #games.append(game)

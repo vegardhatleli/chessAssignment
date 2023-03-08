@@ -1,8 +1,7 @@
 import pandas as pd
 import ChessGame
 import ChessDataBase
-import ChessReader5
-
+from ChessReader5 import * 
 
 def ExportChessGameToExcel(game, sheet_name):
     metadata = game.Game_GetMetaData()
@@ -37,13 +36,12 @@ def ImportChessGameFromExcel(filepath):
     return newGame
 
 
-games = ChessReader5.ImportChessDataBase(
-    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
-)
-testgame = games[0]
+def runTest(inputLocalPathForPNGfile):
+    games = ImportChessDataBase(inputLocalPathForPNGfile)
+    testgame = games[0]
+    ExportChessGameToExcel(testgame, '1')
+    test = ImportChessGameFromExcel('chessgame.xlsx')
 
-ExportChessGameToExcel(testgame, '1')
-# ExportChessDataBaseToExcel(games)
-test = ImportChessGameFromExcel('chessgame.xlsx')
+pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+runTest(pathForPng)
 
-print(test.Game_GetOpening())

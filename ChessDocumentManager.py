@@ -24,7 +24,7 @@ def writeGameToDocument(dataBase):
     sd_won = CalculateStandardDeviation_StockfishWon(dataBase)
     sd_lost = CalculateStandardDeviation_StockfishLost(dataBase)
 
-    opening_dictionary = ExtractOpeningResultsofGamesPlayedNTimes(database, 20)
+    opening_dictionary = ExtractOpeningResultsofGamesPlayedNTimes(dataBase, 20)
     document = Document()
     document.add_heading('Chessgame database statistics', 0)
 
@@ -150,5 +150,10 @@ def writeGameToDocument(dataBase):
     #document.add_page_break()
     document.save('StatDocument.docx')
 
-database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
-writeGameToDocument(database)
+
+def runTest(inputLocalPathForPNGfile):
+    database = createDataBase(inputLocalPathForPNGfile, 'test')
+    writeGameToDocument(database)
+
+pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+runTest(pathForPng)

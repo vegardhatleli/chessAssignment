@@ -383,18 +383,4 @@ def ExtractOpeningResultsofGamesPlayedNTimes(database, n):
     return new_opening_results
 
 
-# database = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
 
-
-database = createDataBase(
-    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testdatabase')
-
-
-# plotGamesStillOnGoing_StockFish(database)
-
-#dick = ExtractOpeningResults(database)
-
-#plotGamesStillOnGoing_StockfishWonOrLost(database)
-dick = ExtractOpeningResultsofGamesPlayedNTimes(database, 10)
-
-print(dick)
