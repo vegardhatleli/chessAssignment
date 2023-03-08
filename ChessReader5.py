@@ -47,38 +47,6 @@ def ExportChessGameToPng(game):
     # With if statement instead of regex
 
 
-def stringToMoves(moves_string):
-    keep_track_of_move = 1
-    last_move_1 = ''
-    last_move_2 = ''
-    last_move_3 = ''
-    last_move_4 = ''
-    last_move_5 = ''
-    move = ''
-    moves = []
-    for element in moves_string:
-        last_move_1 = last_move_2
-        last_move_2 = last_move_3
-        last_move_3 = last_move_4
-        last_move_4 = last_move_5
-        last_move_5 = element
-        if (last_move_3 == str(keep_track_of_move) and last_move_4 == '.' and last_move_5 == ' '):
-            moves.append(move[:-2])
-            move = ''
-            keep_track_of_move += 1
-        elif ((last_move_3 + last_move_4) == str(keep_track_of_move) and last_move_5 == '.'):
-            moves.append(move[:-2])
-            move = ''
-            keep_track_of_move += 1
-        elif ((last_move_2 + last_move_3 + last_move_4) == str(keep_track_of_move) and last_move_5 == '.'):
-            moves.append(move[:-2])
-            move = ''
-            keep_track_of_move += 1
-        else:
-            move = move + element
-    return moves
-
-
 def ReadLine(inputFile):
     line = inputFile.readline()
     if line == "":
@@ -107,7 +75,6 @@ def ReadChessDataBase(inputFile):
                 match = re.search(r'"([^"]+)"', line)
                 if match:
                     value = match.group(1)
-                #print(key + " " + value)
                 metadata.append([key, value])
                 line = ReadLine(inputFile)
                 if line == None:
@@ -123,20 +90,14 @@ def ReadChessDataBase(inputFile):
                 cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
                 result = re.split(r'\d+\.', cleaned_string)
                 result = result[1:]
+                substring_to_remove = '[Event "CCRL 40/15"]'
+                result[-1] = result[-1].replace(substring_to_remove, '')
                 game = ChessGame.ChessGame(metadata, result)
                 games.append(game)
                 metadata = []
                 moves_string = ''
                 step = 2
     return games
-
-# redundant atm, could be used instead of direct approach
-
-
-def stringToListOfMoves(moves_string):
-    cleaned_string = re.sub(r'\{[^}]*\}', '', moves_string)
-    result = re.split(r'\d+\.', cleaned_string)
-    return result
 
 
 def createDataBase(inputfile, name):
@@ -148,7 +109,7 @@ def createDataBase(inputfile, name):
 
 
 name = 'testdatabase'
-inputfile =   '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+inputfile = '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 
 
 database = createDataBase(inputfile, name)
@@ -158,5 +119,6 @@ pathVegardErik = [
     '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 ]
 
-
 # ExportChessDataBaseToPng(database)
+
+# print(database.DataBase_GetGames()[0].Game_GetOpening()[1])
