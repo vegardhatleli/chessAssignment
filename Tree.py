@@ -4,6 +4,8 @@ from ChessReader5 import *
 from ChessGame import *
 import graphviz
 from graphviz import *
+
+
 class Tree:
     def __init__(self):
         #self.Name = name
@@ -18,7 +20,7 @@ class Tree:
             list_of_moves.append(two_moves[1])
         return list_of_moves
 
-    def build(self, dataBase):
+    def build(self, dataBase, depthOfTree):
 
         def split_MoveString(movesString):
             list_of_moves = []
@@ -41,21 +43,25 @@ class Tree:
         for game in games:
             parent_node = self.rootNode
             moves = split_MoveString(game.Game_GetMoves())
+            depth = 0
             for move in moves:
                 childNode = N.Node(move)
                 new_node = parent_node.Node_AddChildren(childNode)
                 addResultToNode(game, new_node)
                 parent_node = new_node
+                depth += 1
+                if depth == depthOfTree:
+                    break
 
         return self.rootNode
-    
-    def build_tree_openings(self, opening, dataBase):
+
+    def build_tree_openings(self, opening, dataBase, depthOfTree):
         games = dataBase.DataBase_GetGames()
         newDataBase = ChessDataBase.ChessDataBase('newDataBase')
         for game in games:
             if game.Game_GetOpening()[1] == opening:
                 newDataBase.DataBase_AddGame(game)
-        return self.build(newDataBase)
+        return self.build(newDataBase, depthOfTree)
 
     def print_tree(self, rootNode):
         spaces = ' ' * rootNode.Node_GetMoveNumber() * 2
@@ -70,78 +76,30 @@ class Tree:
         for game in games:
             print(game.Game_GetMoves())
 
-    def build_test_tree():
 
-        node = N.Node('e4')
-        node1 = N.Node('d4')
-        node2 = N.Node('d5')
-        node3 = N.Node('Cf6')
-        node4 = N.Node('e4')
-        node5 = N.Node('d4')
-        node6 = N.Node('d5')
-        node7 = N.Node('Cf6')
-        node8 = N.Node('e4')
-        node9 = N.Node('d4')
-        node10 = N.Node('d5')
-        node11 = N.Node('Cf6')
-        node12 = N.Node('Cf6')
-        node13 = N.Node('e4')
-        node14 = N.Node('d4')
-        node15 = N.Node('d5')
-        node16 = N.Node('Cf6')
-        node.Node_AddChildren(node1)
-        node.Node_AddChildren(node2)
-        node.Node_AddChildren(node3)
-
-        node1.Node_AddChildren(node4)
-        node1.Node_AddChildren(node5)
-        node1.Node_AddChildren(node6)
-        node1.Node_AddChildren(node7)
-
-        node2.Node_AddChildren(node8)
-        node2.Node_AddChildren(node9)
-        node2.Node_AddChildren(node10)
-        node2.Node_AddChildren(node11)
-
-        node3.Node_AddChildren(node12)
-        node3.Node_AddChildren(node13)
-        node3.Node_AddChildren(node14)
-        node3.Node_AddChildren(node15)
-
-        return node
-
-def visualize_tree():
-    dataBase = createDataBase('/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
+def visualize_tree(database, opening, depthOfTree):
     g = graphviz.Digraph('G', filename='hello.gv')
     tree = Tree()
-    rootNode = tree.build_tree_openings("QGA, Bogolyubov variation", dataBase)
-    
-    g.node(f'{rootNode.Node_GetMove()}')
-    
+    rootNode = tree.build_tree_openings(opening, database, depthOfTree)
+
+    g.node(f'{opening}')
     def add_node(node):
         if node.Node_GetPlayer():
-            g.node(node.Node_GetMove(), color = 'grey')
+            g.node(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}', style = 'filled' , fillcolor='white', label = f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()} \n W: {node.Node_GetWhiteWins()} \n B: {node.Node_GetBlackWins()} \n R: {node.Node_GetRemis()}')
         if not node.Node_GetPlayer():
-            g.node(node.Node_GetMove(), color = 'black')
+            g.node(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}', style = 'filled' , fillcolor='black', fontcolor = 'white', label = f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()} \n W: {node.Node_GetWhiteWins()} \n B: {node.Node_GetBlackWins()} \n R: {node.Node_GetRemis()}')
         for child in node.children:
             add_node(child)
 
     def add_edges(node):
         for child in node.children:
-            g.edge(node.Node_GetMove(), child.Node_GetMove())
+            g.edge(f'{node.Node_GetMoveNumber()}. {node.Node_GetMove()}', f'{child.Node_GetMoveNumber()}. {child.Node_GetMove()}')
             add_edges(child)
     
+
     add_node(rootNode)
     add_edges(rootNode)
     g.view()
-
-
-def build_tree_openings(opening, dataBase):
-    openings = []
-
-    tree = Tree()
-    # tree.build(games)
-    return tree
 
 # GRAPHWIZ
 
@@ -149,8 +107,7 @@ def build_tree_openings(opening, dataBase):
 def build_tree():
 
     dataBase = createDataBase(
-            '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
-, 'testfil')
+        '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'testfil')
     tree = Tree()
     tree.build(dataBase)
     # tree.print_tree(tree.rootNode)
@@ -166,16 +123,10 @@ def build_tree():
             list_of_secondMoves.append(str(game.Game_GetMoves()[0].split()[1]))
     print(set(list_of_secondMoves))
 
-    # tree.print_tree(tree.rootNode)
-
-
-# build_tree()
-
+  
 dataBase = createDataBase(
-        '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'test')
+    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'test')
 
-#tree = Tree()
-#tree.build(dataBase)
-
-#print(tree.rootNode.Node_GetChildren()[0].Node_GetRemis())
-visualize_tree()
+opening = "Budapest"
+depthOfTree = 26
+visualize_tree(dataBase, opening, depthOfTree)

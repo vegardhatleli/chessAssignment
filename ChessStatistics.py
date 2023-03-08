@@ -394,6 +394,7 @@ database = createDataBase(
 
 #dick = ExtractOpeningResults(database)
 
-dick = ExtractOpeningResultsofGamesPlayedNTimes(database, 200)
+#plotGamesStillOnGoing_StockfishWonOrLost(database)
+dick = ExtractOpeningResultsofGamesPlayedNTimes(database, 10)
 
 print(dick)
