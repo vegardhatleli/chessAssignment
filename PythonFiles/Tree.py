@@ -9,7 +9,6 @@ from graphviz import *
 class Tree:
     def __init__(self):
         self.rootNode = N.Node('Root')
-        self.treenodes = []
 
     def build(self, dataBase, depthOfTree):
 
@@ -81,13 +80,14 @@ class Tree:
         add_edges(rootNode)
         g.view()
 
+#RUN THIS TO VIEW OPENING-TREE, YOU CAN CHANGE THE TYPE OF OPENING AND DEPTH OF THE TREE
 def runTest(inputLocalPathForPNGfile):
     dataBase = createDataBase(inputLocalPathForPNGfile, 'test')
     tree = Tree()
     opening = "Budapest"
     depthOfTree = 18
     tree.build_tree_openings(opening, dataBase, depthOfTree)
-    tree.visualize(dataBase, opening, depthOfTree, 'deeptree_Budapest')
+    tree.visualize(dataBase, opening, depthOfTree, 'new_tree')
 
-pathForPng ='/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+pathForPng =''
 runTest(pathForPng)

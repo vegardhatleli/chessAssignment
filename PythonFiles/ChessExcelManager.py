@@ -27,13 +27,14 @@ def ImportChessGameFromExcel(filepath):
     newGame = ChessGame.ChessGame(metadata, moves)
     return newGame
 
-
+#RUN THIS ONE TO EXPORT CHESSGAME TO EXCEL-FILE
 def runTest(inputLocalPathForPNGfile):
     games = ImportChessDataBase(inputLocalPathForPNGfile)
     testgame = games[0]
     ExportChessGameToExcel(testgame, '1')
     test = ImportChessGameFromExcel('chessgame.xlsx')
 
-pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+#INSERT FILEPATH FOR PNG FILE HERE:
+pathForPng = ''
 runTest(pathForPng)
 

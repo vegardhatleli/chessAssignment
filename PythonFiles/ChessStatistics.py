@@ -1,7 +1,4 @@
 from ChessParser import *
-import ChessGame
-import ChessDataBase
-import ChessParser
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -380,4 +377,13 @@ def ExtractOpeningResultsofGamesPlayedNTimes(database, n):
                                             opening_results[opening][1], opening_results[opening][2]]
     return new_opening_results
 
+#RUN THIS TO EXTRACT OPENING RESULTS FROM DATABASE + PLOT GAMES STILL ONGOING
+def runTest(inputLocalPathForPNGfile, n):
+    database = createDataBase(inputLocalPathForPNGfile, 'test')
+    print(ExtractOpeningResultsofGamesPlayedNTimes(database, n))
+    plotGamesStillOnGoing_StockfishWonOrLost(database)
 
+#INSERT FILEPATH FOR PNG FILE AND OPENING-BOUNDARY HERE:
+pathForPng =''
+OpeningingsPlayedNtimes = 15
+runTest(pathForPng, OpeningingsPlayedNtimes)

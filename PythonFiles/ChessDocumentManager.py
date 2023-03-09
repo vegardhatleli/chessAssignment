@@ -1,6 +1,5 @@
 from docx import Document
 from docx.shared import Inches
-import ChessGame
 from ChessParser import *
 from ChessStatistics import *
 from docx2pdf import convert
@@ -163,10 +162,12 @@ In this task we were given to use a file that contains 2600 chess games in a pgn
     #Convert to pdf and merge to one 
     convert('StatDocument.docx')
 
+#RUN TO MAKE YOUR OWN WORD-DOCUMENT AND PDF FORMAT OF SAME DOCUMENT
 def runTest(inputLocalPathForPNGfile):
     database = createDataBase(inputLocalPathForPNGfile, 'test')
     writeGameToDocument(database)
 
-pathForPng ='/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+#INSERT FILEPATH FOR PNG FILE HERE:
+pathForPng =''
 
 runTest(pathForPng)

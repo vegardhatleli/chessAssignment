@@ -1,6 +1,5 @@
 # Data base of chess games
 
-import ChessGame
 class ChessDataBase:
     def __init__(self, name):
         self.name = name
