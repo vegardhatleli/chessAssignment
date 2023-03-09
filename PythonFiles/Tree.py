@@ -1,6 +1,6 @@
 import Node as N
 from ChessDataBase import *
-from ChessReader5 import *
+from ChessParser import *
 from ChessGame import *
 import graphviz
 from graphviz import *
@@ -8,17 +8,8 @@ from graphviz import *
 
 class Tree:
     def __init__(self):
-        #self.Name = name
         self.rootNode = N.Node('Root')
         self.treenodes = []
-
-    def split_MoveString(movesString):
-        list_of_moves = []
-        for element in movesString:
-            two_moves = element.split()
-            list_of_moves.append(two_moves[0])
-            list_of_moves.append(two_moves[1])
-        return list_of_moves
 
     def build(self, dataBase, depthOfTree):
 
@@ -98,5 +89,5 @@ def runTest(inputLocalPathForPNGfile):
     tree.build_tree_openings(opening, dataBase, depthOfTree)
     tree.visualize(dataBase, opening, depthOfTree, 'deeptree_Budapest')
 
-pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+pathForPng ='/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 runTest(pathForPng)

@@ -65,13 +65,3 @@ class Node:
     def Node_SetRemis(self, newRemis):
         self.remis = newRemis
 
-    # printer
-
-    def print_tree(self):
-        spaces = ' ' * self.Node_GetMoveNumber() * 2
-        prefix = spaces + '|_' if self.parent else ''
-        print(prefix + self.move)
-        if self.children:
-            for child in self.children:
-                child.print_tree()
-

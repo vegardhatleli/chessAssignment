@@ -1,7 +1,7 @@
-from ChessReader5 import *
+from ChessParser import *
 import ChessGame
 import ChessDataBase
-import ChessReader5
+import ChessParser
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -96,7 +96,6 @@ def plotGamesStillOnGoing_Total(database):
     for game in games:
         endmove = len(game.Game_GetMoves())
         chart[endmove] = chart[endmove] + 1
-
     x = np.arange(215)
     y = np.full(215, 2600)
     pregames = 0
@@ -128,7 +127,7 @@ def plotGamesStillOnGoing_StockFish(database):
             whitegames.append(game)
         else:
             blackgames.append(game)
-    ###
+    
     totalplot = np.full(215, 2600)
     pregames = 0
     for i in range(215):
@@ -255,7 +254,6 @@ def plotGamesStillOnGoing_StockfishWonOrLost(database):
             wongames.append(game)
         elif (str(game.Game_GetWhite()[1][0:9]) == 'Stockfish' and game.Game_GetResult()[1] == '0-1') or ((str(game.Game_GetWhite()[1][0:9])) != 'Stockfish' and game.Game_GetResult()[1] == '1-0'):
             lostgames.append(game)
-    ###
     print(len(wongames))
     print(len(lostgames))
     for game in wongames:
@@ -282,18 +280,18 @@ def plotGamesStillOnGoing_StockfishWonOrLost(database):
     axs[0].set_xlabel("Moves")
     axs[0].set_ylabel("Games")
     axs[0].set_title(
-        "How many games ongoing after N't move and won by Stockfish")
+        "Games ongoing and won by Stockfish")
     plt.title("How many games ongoing after N'th move")
+    axs[0].legend()
+
     axs[1].plot(x, lostplots, color='b', label='Stockfish lost')
     axs[1].set_xlabel("Moves")
     axs[1].set_ylabel("Games")
     axs[1].set_title(
-        "How many games ongoing after N't move and lost by Stockfish")
-    plt.legend()
+        "Games ongoing and lost by Stockfish")
+    axs[1].legend()
     plt.savefig("Images/GamesStillOngoingStockfishWonorLost.png")
     plt.show()
-
-# CALCULTE MATH HERE THAN DONE
 
 
 def CalculateMeanValueOfMoves_StockfishWon(database):
