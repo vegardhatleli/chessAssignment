@@ -86,7 +86,7 @@ def plotLastMoveBarChart_Total(database):
     plt.xlabel("Moves")
     plt.ylabel("Games")
     plt.title("How many moves before end of game")
-    plt.savefig("EndMove.png")
+    plt.savefig("Images/EndMove.png")
     plt.show()
 
 
@@ -108,7 +108,7 @@ def plotGamesStillOnGoing_Total(database):
     plt.ylabel("Games")
     plt.title("How many games ongoing after N'th move")
     plt.plot(x, y)
-    plt.savefig("GamesStillOnGoingTotal.png")
+    plt.savefig("Images/GamesStillOnGoingTotal.png")
     plt.show()
 
 
@@ -161,7 +161,7 @@ def plotGamesStillOnGoing_StockFish(database):
     plt.plot(x, blackplots, color='b', label='Stockfish black')
     plt.plot(x, totalplot, color='g', label='Total')
     plt.legend()
-    plt.savefig("GamesStillOngoingStockfish.png")
+    plt.savefig("Images/GamesStillOngoingStockfish.png")
     plt.show()
 
 
@@ -290,7 +290,7 @@ def plotGamesStillOnGoing_StockfishWonOrLost(database):
     axs[1].set_title(
         "How many games ongoing after N't move and lost by Stockfish")
     plt.legend()
-    plt.savefig("GamesStillOngoingStockfishWonorLost.png")
+    plt.savefig("Images/GamesStillOngoingStockfishWonorLost.png")
     plt.show()
 
 # CALCULTE MATH HERE THAN DONE
@@ -381,6 +381,5 @@ def ExtractOpeningResultsofGamesPlayedNTimes(database, n):
             new_opening_results[opening] = [opening_results[opening][0],
                                             opening_results[opening][1], opening_results[opening][2]]
     return new_opening_results
-
 
 
