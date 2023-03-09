@@ -68,8 +68,8 @@ def writeGameToDocument(dataBase):
     
     #PlOTS
     document.add_heading('Plots', level=1)
-    document.add_picture('GamesStillOngoingStockfish.png', width=Inches(5.25))
-    document.add_picture('GamesStillOngoingStockfishWonorLost.png', width=Inches(5.25))
+    document.add_picture('Images/GamesStillOngoingStockfish.png', width=Inches(5.25))
+    document.add_picture('Images/GamesStillOngoingStockfishWonorLost.png', width=Inches(5.25))
 
     #TABLE 3
     document.add_page_break()
@@ -146,9 +146,11 @@ def writeGameToDocument(dataBase):
         row_cells[3].text = str(value[2])
         row_index += 1
 
+    document.add_page_break()
+    
+    
     # Save the document
-    #document.add_page_break()
-    document.save('StatDocument.docx')
+    document.save('Images/StatDocument.docx')
 
 
 def runTest(inputLocalPathForPNGfile):

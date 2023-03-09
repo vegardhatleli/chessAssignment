@@ -90,15 +90,13 @@ class Tree:
         add_edges(rootNode)
         g.view()
 
+def runTest(inputLocalPathForPNGfile):
+    dataBase = createDataBase(inputLocalPathForPNGfile, 'test')
+    tree = Tree()
+    opening = "Budapest"
+    depthOfTree = 18
+    tree.build_tree_openings(opening, dataBase, depthOfTree)
+    tree.visualize(dataBase, opening, depthOfTree, 'deeptree_Budapest')
 
-  
-dataBase = createDataBase(
-    '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn', 'test')
-
-tree = Tree()
-opening = "Budapest"
-depthOfTree = 18
-
-tree.build_tree_openings(opening, dataBase, depthOfTree)
-
-tree.visualize(dataBase, opening, depthOfTree, 'deeptree_Budapest')
+pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+runTest(pathForPng)
