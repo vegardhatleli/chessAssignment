@@ -3,6 +3,8 @@ from docx.shared import Inches
 import ChessGame
 from ChessReader5 import *
 from ChessStatistics import *
+from docx2pdf import convert
+from pdf2image import convert_from_path
 
 def writeGameToDocument(dataBase):
     #VALUES
@@ -24,18 +26,15 @@ def writeGameToDocument(dataBase):
     sd_won = CalculateStandardDeviation_StockfishWon(dataBase)
     sd_lost = CalculateStandardDeviation_StockfishLost(dataBase)
 
+
     opening_dictionary = ExtractOpeningResultsofGamesPlayedNTimes(dataBase, 20)
+    
     document = Document()
     document.add_heading('Chessgame database statistics', 0)
 
     document.add_heading('Task', level=1)
     document.add_paragraph('''
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    In porta metus vel odio eleifend, non volutpat velit sollicitudin. Curabitur dapibus 
-    mollis sem placerat lobortis. Praesent in accumsan erat. Cras eget massa quis lectus 
-    dapibus hendrerit ut quis odio. Nullam non porta mauris, vitae pharetra mauris. Nulla
-    quis massa ex. Integer elementum massa quis tortor fermentum molestie. Nulla imperdiet 
-    nisl nisi, ac vehicula justo pharetra non. Cras laoreet neque et lobortis sodales.
+In this task we were given to use a file that contains 2600 chess games in a pgn format (Portable Game Notation). The objective of this assignment was to design a Python script that loads these games, perform various statistics on them, a display the results at a suitable format. This document displays some of the results that we find most useful for displaying the main functionality of the script. This means that although many of the functions have many parameters that can be changed by the user we have used parameters that showcases the functionality best. All of the data for the tables and the images used are also stored in the .zip file.
     ''')
 
 
@@ -122,7 +121,7 @@ def writeGameToDocument(dataBase):
 
 
     #TABLE 4
-    document.add_paragraph('\nTable regarding different openings played by stockfish and if they were won or lost')
+    document.add_paragraph('\nTable regarding different openings played and the reusult in each of these. In this table we look at the openings that have been played more than 20 times')
 
     # Determine the number of rows needed for the table
     num_rows = len(opening_dictionary) + 1 # Add 1 for the header row
@@ -132,8 +131,8 @@ def writeGameToDocument(dataBase):
     # Add column headers to the first row
     hdr_cells = table4.rows[0].cells
     hdr_cells[0].text = 'Opening'
-    hdr_cells[1].text = 'Won'
-    hdr_cells[2].text = 'Lost'
+    hdr_cells[1].text = 'White won'
+    hdr_cells[2].text = 'Black won'
     hdr_cells[3].text = 'Remis'
 
     # Add rows to the table using data from the dictionary
@@ -146,12 +145,23 @@ def writeGameToDocument(dataBase):
         row_cells[3].text = str(value[2])
         row_index += 1
 
-    document.add_page_break()
     
-    
-    # Save the document
-    document.save('Images/StatDocument.docx')
+    image = convert_from_path('deeptree_Budapest.pdf')
+    image1 = convert_from_path('shallowtree_Sicilian.pdf')
 
+    image[0].save('Images/deeptree_Budapest.jpg', 'JPEG')
+    image1[0].save('Images/shallowtree_Sicilian.jpg', 'JPEG')
+
+    document.add_heading('Trees', level=1)
+    document.add_paragraph('\nTrees for two different openenings with two different depths.')
+    document.add_picture('Images/shallowtree_Sicilian.jpg', height=Inches(8))
+    document.add_picture('Images/deeptree_Budapest.jpg', width=Inches(7.25))
+
+    # Save the document as word file
+    document.save('StatDocument.docx')
+
+    #Convert to pdf and merge to one 
+    convert('StatDocument.docx')
 
 def runTest(inputLocalPathForPNGfile):
     database = createDataBase(inputLocalPathForPNGfile, 'test')
