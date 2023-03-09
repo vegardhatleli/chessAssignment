@@ -1,7 +1,7 @@
 from docx import Document
 from docx.shared import Inches
 import ChessGame
-from ChessReader5 import *
+from ChessParser import *
 from ChessStatistics import *
 
 def writeGameToDocument(dataBase):
@@ -41,7 +41,7 @@ def writeGameToDocument(dataBase):
 
     document.add_heading('Tables', level=1)
 
-    document.add_paragraph('\nTable regarding number of games won, lost and remis by stockfish')
+    document.add_paragraph('\nTable regarding number of games won, lost and remis by Stockfish')
     #TABLE 1
     table1 = document.add_table(rows=2, cols=3, style="Table Grid")
     heading_row = table1.rows[0].cells
@@ -157,5 +157,6 @@ def runTest(inputLocalPathForPNGfile):
     database = createDataBase(inputLocalPathForPNGfile, 'test')
     writeGameToDocument(database)
 
-pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+pathForPng = '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+
 runTest(pathForPng)

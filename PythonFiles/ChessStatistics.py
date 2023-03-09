@@ -1,7 +1,6 @@
-from ChessReader5 import *
+from ChessParser import *
 import ChessGame
 import ChessDataBase
-import ChessReader5
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -282,14 +281,15 @@ def plotGamesStillOnGoing_StockfishWonOrLost(database):
     axs[0].set_xlabel("Moves")
     axs[0].set_ylabel("Games")
     axs[0].set_title(
-        "How many games ongoing after N't move and won by Stockfish")
-    plt.title("How many games ongoing after N'th move")
+        "Games ongoing won by Stockfish")
+    plt.legend()
+    axs[0].legend()
     axs[1].plot(x, lostplots, color='b', label='Stockfish lost')
     axs[1].set_xlabel("Moves")
     axs[1].set_ylabel("Games")
     axs[1].set_title(
-        "How many games ongoing after N't move and lost by Stockfish")
-    plt.legend()
+        "Games ongoing lost by Stockfish")
+    axs[1].legend()
     plt.savefig("Images/GamesStillOngoingStockfishWonorLost.png")
     plt.show()
 
@@ -382,4 +382,9 @@ def ExtractOpeningResultsofGamesPlayedNTimes(database, n):
                                             opening_results[opening][1], opening_results[opening][2]]
     return new_opening_results
 
+pathForPng = '/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
 
+
+database = createDataBase(pathForPng, 'yo')
+plotGamesStillOnGoing_StockfishWonOrLost(database)
+print(ExtractOpeningResultsofGamesPlayedNTimes(database, 16))
