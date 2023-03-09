@@ -1,20 +1,13 @@
-# 1. Imported Modules
-# -------------------
-
 import re
 import pandas as pd
 import ChessGame
 import ChessDataBase
-# 2. Main
-# -------
+
 
 
 def ImportChessDataBase(filePath):
     inputFile = open(filePath, "r")
     games = ReadChessDataBase(inputFile)
-    # for i in range(2):
-    # print(Game_GetMoves(games[i]))
-
     inputFile.close()
     return games
 
@@ -44,7 +37,6 @@ def ExportChessGameToPng(game):
     f.write('\n')
     f.close()
 
-    # With if statement instead of regex
 
 
 def ReadLine(inputFile):

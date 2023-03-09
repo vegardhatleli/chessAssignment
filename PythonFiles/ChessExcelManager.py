@@ -1,7 +1,7 @@
 import pandas as pd
 import ChessGame
 import ChessDataBase
-from ChessReader5 import * 
+from ChessParser import * 
 
 def ExportChessGameToExcel(game, sheet_name):
     metadata = game.Game_GetMetaData()
@@ -14,14 +14,6 @@ def ExportChessGameToExcel(game, sheet_name):
     df2.to_excel(writer, sheet_name=sheet_name,
                  index=False, header='Moves', startcol=2, startrow=0)
     writer.save()
-
-
-# Does not work at the moment, the sheets overwrite themselfs
-def ExportChessDataBaseToExcel(database):
-    counter = 1
-    for game in database:
-        ExportChessGameToExcel(game, str(counter))
-        counter += 1
 
 
 def ImportChessGameFromExcel(filepath):

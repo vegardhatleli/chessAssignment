@@ -1,7 +1,7 @@
 from docx import Document
 from docx.shared import Inches
 import ChessGame
-from ChessReader5 import *
+from ChessParser import *
 from ChessStatistics import *
 from docx2pdf import convert
 from pdf2image import convert_from_path
@@ -40,7 +40,7 @@ In this task we were given to use a file that contains 2600 chess games in a pgn
 
     document.add_heading('Tables', level=1)
 
-    document.add_paragraph('\nTable regarding number of games won, lost and remis by stockfish')
+    document.add_paragraph('\nTable regarding number of games won, lost and remis by Stockfish')
     #TABLE 1
     table1 = document.add_table(rows=2, cols=3, style="Table Grid")
     heading_row = table1.rows[0].cells
@@ -56,7 +56,7 @@ In this task we were given to use a file that contains 2600 chess games in a pgn
 
 
     #TABLE 2
-    document.add_paragraph('\nTable regarding number of games won by stockfish with white or black')
+    document.add_paragraph('\nTable regarding number of games won by Stockfish with white or black')
     table2 = document.add_table(rows=2, cols=2, style="Table Grid")
     heading_row1 = table2.rows[0].cells
     heading_row1[0].text = "Won with white"
@@ -83,16 +83,16 @@ In this task we were given to use a file that contains 2600 chess games in a pgn
     data_row1[0].text = 'All the games in total'
     data_row1[1].text = str(mean_total)
     data_row2 = table3.rows[2].cells
-    data_row2[0].text = 'Games where stockfish was white'
+    data_row2[0].text = 'Games where Stockfish was white'
     data_row2[1].text = str(mean_white)    
     data_row3 = table3.rows[3].cells
-    data_row3[0].text = 'Games where stockfish was white'
+    data_row3[0].text = 'Games where Stockfish was white'
     data_row3[1].text = str(mean_black)    
     data_row4 = table3.rows[4].cells
-    data_row4[0].text = 'Games where stockfish won'
+    data_row4[0].text = 'Games where Stockfish won'
     data_row4[1].text = str(mean_won)    
     data_row5 = table3.rows[5].cells
-    data_row5[0].text = 'Games where stockfish lost'
+    data_row5[0].text = 'Games where Stockfish lost'
     data_row5[1].text = str(mean_lost)
 
 
@@ -106,22 +106,22 @@ In this task we were given to use a file that contains 2600 chess games in a pgn
     data_row1[0].text = 'All the games in total'
     data_row1[1].text = str(sd_total)
     data_row2 = table4.rows[2].cells
-    data_row2[0].text = 'Games where stockfish was white'
+    data_row2[0].text = 'Games where Stockfish was white'
     data_row2[1].text = str(sd_white)    
     data_row3 = table4.rows[3].cells
-    data_row3[0].text = 'Games where stockfish was white'
+    data_row3[0].text = 'Games where Stockfish was white'
     data_row3[1].text = str(sd_black)    
     data_row4 = table4.rows[4].cells
-    data_row4[0].text = 'Games where stockfish won'
+    data_row4[0].text = 'Games where Stockfish won'
     data_row4[1].text = str(sd_won)    
     data_row5 = table4.rows[5].cells
-    data_row5[0].text = 'Games where stockfish lost'
+    data_row5[0].text = 'Games where Stockfish lost'
     data_row5[1].text = str(sd_lost)
 
 
 
     #TABLE 4
-    document.add_paragraph('\nTable regarding different openings played and the reusult in each of these. In this table we look at the openings that have been played more than 20 times')
+    document.add_paragraph('\nTable regarding different openings played and the result in each of these. In this table we look at the openings that have been played more than 20 times')
 
     # Determine the number of rows needed for the table
     num_rows = len(opening_dictionary) + 1 # Add 1 for the header row
@@ -167,5 +167,6 @@ def runTest(inputLocalPathForPNGfile):
     database = createDataBase(inputLocalPathForPNGfile, 'test')
     writeGameToDocument(database)
 
-pathForPng = '/Users/erikwahlstrom/Performance_Engineering/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+pathForPng ='/Users/vegardhatleli/Library/Mobile Documents/com~apple~CloudDocs/NTNU/I&IKT Vår 2023/Avanserte verktøy for performace engineering/innlevering2/chessassignment/Stockfish_15_64-bit.commented.[2600].pgn'
+
 runTest(pathForPng)
